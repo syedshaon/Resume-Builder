@@ -1,0 +1,88 @@
+@import "./reset";
+@import "./variables";
+@import "./cv-layout";
+@import "./cv-show";
+@import "./cv-edit";
+@import "./icons";
+
+// @media print {
+// body {
+//   visibility: hidden;
+//   max-width: 800px;
+// }
+// .cv-show {
+//   width: 100%;
+//   visibility: visible;
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+// }
+// }
+
+@media print {
+  body {
+    // background-color: var(--bodyC);
+    // Following to ensure graphics show up on mobile while printing
+    -webkit-print-color-adjust: exact;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .cv-show {
+    box-shadow: none;
+  }
+  .cv-show-wrapper {
+    padding: 0;
+  }
+  .cv-parent {
+    display: block;
+    padding: 0;
+  }
+  .cv-create {
+    display: none;
+  }
+  .references {
+    margin-top: 40px;
+  }
+}
+
+// @media print {
+//   body {
+//     background-color: var(--bodyC);
+//     // Following to ensure graphics show up on mobile while printing
+//     -webkit-print-color-adjust: exact;
+//   }
+//   .nav {
+//     display: none;
+//   }
+
+//   .builder {
+//     display: none;
+//   }
+//   .control {
+//     display: none;
+//   }
+//   .cv-show {
+//     box-shadow: none;
+//   }
+
+//   .cv-show-wrapper {
+//     padding: 0;
+//   }
+//   .cv-parent {
+//     display: block;
+//     padding: 0;
+//   }
+//   .cv-create {
+//     display: none;
+//   }
+//   .references {
+//     margin-top: 40px;
+//   }
+// }

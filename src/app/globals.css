@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.additional input:last-of-type {
+  margin-right: 45px;
+}
+
+/* components/SkillsForm.module.css */
+
+.expandle {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-out;
+}
+
+.expandle.expanded {
+  max-height: 900px; /* Adjust the max-height according to your content */
+}

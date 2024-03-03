@@ -1,0 +1,192 @@
+// body {
+//   background-color: var(--bodyC);
+// }
+.cv-parent {
+  width: 100%;
+  // height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: minmax(450px, 600px) minmax(700px, 1100px);
+
+  column-gap: 20px;
+}
+
+.cv-create {
+  grid-column: 1/2;
+  box-shadow: 0px 0px 10px 10px #0c410749;
+  background-color: #fff;
+}
+.cv-show-wrapper {
+  grid-column: 2/3;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 30px;
+}
+// Layout 1: Default Layout
+.noShowImg .eduEx-wrapper {
+  min-height: 950px;
+}
+// Extra Layout Starts
+
+// Layout 2: No Image Center Top
+.person.hideImg {
+  grid-template-areas: "info info" "contact contact";
+  .person-info {
+    text-align: center;
+  }
+}
+
+// Layout 3: No Skill Wide Bottom
+
+.noSkill.cv-show {
+  grid-template-areas: "person person person" "eduEx eduEx eduEx";
+  column-gap: 0;
+  .cv-child.others {
+    display: none !important;
+  }
+  .eduEx-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+.leftSkill.cv-show {
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "person person " " others eduEx";
+  // column-gap: 20px;
+  .eduEx-wrapper {
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+  .cv-child.others {
+    padding-left: 40px;
+  }
+}
+
+.allLeft.cv-show {
+  grid-template-columns: 3fr 7fr;
+  grid-template-areas: "person eduEx" "others eduEx";
+  grid-template-rows: 500px auto;
+  // column-gap: 20px;
+  .eduEx-wrapper {
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 60px;
+    min-height: 1120px;
+  }
+  .cv-child.others {
+    padding-left: 40px;
+  }
+  .cv-child.person {
+    // display: block;
+    // max-width: 300px;
+    overflow: hidden;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: " image" "info" "contact ";
+
+    .person-info,
+    .person-contact,
+    .person-img {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      // align-items: stretch;
+      margin-bottom: 20px;
+      margin-top: 0;
+      margin-right: 0;
+    }
+    .person-img {
+      margin-right: auto;
+    }
+    .person-name {
+      font-size: 1.2rem;
+    }
+    .person-title {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Extra Layout Ends
+
+// scale cv preview for small devices
+// @media screen and (min-width: 1361px) {
+//   .cv-show {
+//     scale: 1;
+//   }
+// }
+// @media screen and (min-width: 1361px) {
+//   .cv-show {
+//     scale: 1;
+//   }
+// }
+
+// @media screen and (min-width: 1200px) {
+//   .cv-show {
+//     scale: 1;
+//   }
+// }
+@media screen and (max-width: 700px) {
+  // .cv-show-wrapper {
+  //   position: relative;
+  // }
+  // .cv-show {
+  //   position: absolute;
+  //   left: 0px;
+  //   top: 0px;
+  //   transform: scale(0.4) translateY(-800px) translateX(-550px);
+  // }
+  .cv-parent {
+    grid-template-columns: minmax(350px, 500px);
+    padding: 10px;
+    // transform: scale(0.4) translateY(-600px) translateX(-282px);
+    .cv-create {
+      grid-column: 1/2;
+      padding: 10px;
+    }
+    .cv-show-wrapper {
+      grid-column: 1/2;
+      padding: 10px;
+      transform: scale(0.4) translateY(-600px) translateX(0px);
+    }
+  }
+}
+@media screen and (min-width: 700px) {
+  .cv-show-wrapper {
+    position: relative;
+  }
+  .cv-show {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: scale(0.4) translateY(-800px) translateX(-550px);
+  }
+  .cv-parent {
+    grid-template-columns: minmax(450px, 500px) minmax(599px, 1100px);
+  }
+}
+@media screen and (min-width: 999px) {
+  .cv-show-wrapper {
+    position: relative;
+  }
+  .cv-show {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    transform: scale(0.6) translateY(-300px) translateX(-250px);
+  }
+  .cv-parent {
+    grid-template-columns: minmax(450px, 500px) minmax(599px, 1100px);
+  }
+}
+@media screen and (min-width: 1300px) {
+  .cv-show {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+  }
+}

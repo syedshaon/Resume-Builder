@@ -1,9 +1,10 @@
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
-import { AuthContextProvider } from "@/actions/AuthContext";
+import "@/components/scss/styles.scss";
+import { AuthContextProvider } from "@/context/AuthContext";
 
-const inter = Inter({ subsets: ["latin"] });
-import Header from "@/components/Header";
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
+import Header from "@/components/cv-create/Header";
 
 export const metadata = {
   title: "Create Next App",
@@ -13,12 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="container mx-auto px-4 max-w-6xl">
-          <AuthContextProvider>
-            {<Header />}
-            {children}
-          </AuthContextProvider>
+      <body className={roboto.className}>
+        <div>
+          <AuthContextProvider>{children}</AuthContextProvider>
         </div>
       </body>
     </html>

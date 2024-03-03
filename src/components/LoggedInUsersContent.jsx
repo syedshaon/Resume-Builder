@@ -1,4 +1,4 @@
-import { useAuthContext } from "@/actions/AuthContext";
+import { useAuthContext } from "@/context/AuthContext";
 
 function LoggedInUsersContent({ children, className }) {
   const { user, loading } = useAuthContext();
