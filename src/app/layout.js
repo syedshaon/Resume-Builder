@@ -11,7 +11,7 @@ export const metadata = {
   author: "Syed Mashiur Rahman",
   keywords: "resume, CV, builder, colorful",
   image: "/resume_lg.png",
-  url: "https://yourdomain.com",
+  url: "https://resume-ez.netlify.app/",
   siteName: "Resume Builder",
 };
 
