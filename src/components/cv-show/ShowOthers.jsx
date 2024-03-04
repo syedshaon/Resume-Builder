@@ -3,7 +3,7 @@ import { useAuthContext } from "@/context/AuthContext";
 export default function ShowOthers() {
   const { otherInfo } = useAuthContext();
 
-  console.log(otherInfo.some((item) => item.visible));
+  // console.log(otherInfo.some((item) => item.visible));
 
   return (
     otherInfo.some((item) => item.visible) &&

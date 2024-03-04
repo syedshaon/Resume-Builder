@@ -8,9 +8,20 @@ export default function PersonalInfoForm() {
   const [imgKitImgUrl, setImgKitImgUrl] = useState("");
 
   const onSuccess = (res) => {
-    // console.log(res);
+    console.log("Success", res.filePath);
     // setImgKitImgUrl(res.url);
     setPersonalInfo((prev) => ({ ...prev, avatar: res.url }));
+  };
+  const onUploadProgress = (e) => {
+    console.log("Progress", e);
+  };
+  const onUploadStart = (state) => {
+    console.log("upload started");
+    console.log(state);
+  };
+  const handleThumbnailChange = (e) => {
+    console.log("Thumbnail Changed");
+    console.log("Thumbnail Changed", e);
   };
   const validateFileFunction = (file) => {
     console.log("validating");
@@ -110,7 +121,7 @@ export default function PersonalInfoForm() {
           </label>
           {/* <input type="file" accept="image/*" id="avatar" name="avatar" onChange={handleAvatarChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" /> */}
           <IKContext publicKey="public_D3R2YXCqESRUwCNMgLufGCsa8GY=" urlEndpoint="https://ik.imagekit.io/odinbook" authenticator={Authenticator}>
-            <IKUpload id="imageInput" name="imageInput" accept="image/*" validateFile={validateFileFunction} fileName="avatar.png" onSuccess={onSuccess} />
+            <IKUpload id="imageInput" onChange={handleThumbnailChange} onUploadStart={onUploadStart} onUploadProgress={onUploadProgress} name="imageInput" accept="image/*" validateFile={validateFileFunction} fileName="avatar.png" onSuccess={onSuccess} />
           </IKContext>
         </div>
       </div>
