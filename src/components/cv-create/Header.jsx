@@ -36,7 +36,7 @@ export default function Header() {
         <LoadSample />
 
         <FaCloudDownloadAlt title="download pdf" className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " onClick={downloadPdf} />
-        <a title="How To?" href="https://www.youtube.com/" target="_blank">
+        <a title="How To?" aria-label="How To Create Resume?" href="https://www.youtube.com/" target="_blank">
           <FaQuestion className="  text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " />
         </a>
 

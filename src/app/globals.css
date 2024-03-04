@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.additional input:last-of-type {
+.additional .addition-holder:last-of-type input {
   margin-right: 45px;
 }
 

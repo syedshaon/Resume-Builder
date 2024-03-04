@@ -34,7 +34,7 @@ export default function SkillsForm({ onSubmit }) {
                   Skill {index + 1}:
                 </label>
                 <div className="flex items-center ">
-                  <input type="text" id={`skill_${index}`} name={`skill_${index}`} value={skill} onChange={(e) => handleSkillChange(index, e.target.value)} className="  bg-gray-300 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" required />
+                  <input type="text" id={`skill_${index}`} name={`skill_${index}`} value={skill} onChange={(e) => handleSkillChange(index, e.target.value)} className="  bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" required />
                   {index === skills.skills.length - 1 && (
                     <span className="ml-2 text-xl cursor-pointer text-gray-700 hover:text-gray-950" onClick={addSkill}>
                       +
@@ -44,7 +44,7 @@ export default function SkillsForm({ onSubmit }) {
               </div>
             ))}
             <div className="flex items-center mt-3 space-x-2">
-              <input type="checkbox" id="visible_skills" name="visible_skills" checked={skills.visible} onChange={() => setSkills((prev) => ({ ...prev, visible: !prev.visible }))} className="border rounded focus:outline-none w-5 h-5 accent-slate-900 cursor-pointer" />
+              <input type="checkbox" id="visible_skills" name="visible_skills" checked={skills.visible} onChange={() => setSkills((prev) => ({ ...prev, visible: !prev.visible }))} className="border  focus:outline-none w-5 h-5 accent-slate-900 cursor-pointer" />
               <label htmlFor="visible_skills">Show on Resume</label>
             </div>
           </div>

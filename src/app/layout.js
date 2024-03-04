@@ -3,7 +3,7 @@ import "./globals.css";
 import "@/components/scss/styles.scss";
 import { AuthContextProvider } from "@/context/AuthContext";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"], display: "swap" });
 
 export const metadata = {
   title: "Resume Builder",

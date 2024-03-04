@@ -51,7 +51,7 @@ export default function PersonalInfoForm() {
           <label htmlFor="name" className="font-bold">
             Name:
           </label>
-          <input type="text" id="name" name="name" value={personalInfo.name} onChange={handleChange} className="bg-gray-300 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" required />
+          <input type="text" id="name" name="name" value={personalInfo.name} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" required />
         </div>
 
         {/* Title */}
@@ -59,7 +59,7 @@ export default function PersonalInfoForm() {
           <label htmlFor="title" className="font-bold">
             Title:
           </label>
-          <input type="text" id="title" name="title" value={personalInfo.title} onChange={handleChange} className="bg-gray-300 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" />
+          <input type="text" id="title" name="title" value={personalInfo.title} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
         </div>
 
         {/* Intro */}
@@ -67,7 +67,7 @@ export default function PersonalInfoForm() {
           <label htmlFor="intro" className="font-bold">
             Intro:
           </label>
-          <textarea id="intro" name="intro" value={personalInfo.intro} onChange={handleChange} className="bg-gray-300 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" rows={5} />
+          <textarea id="intro" name="intro" value={personalInfo.intro} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" rows={5} />
         </div>
 
         {/* Email */}
@@ -75,7 +75,7 @@ export default function PersonalInfoForm() {
           <label htmlFor="email" className="font-bold">
             Email:
           </label>
-          <input type="email" id="email" name="email" value={personalInfo.email} onChange={handleChange} className="bg-gray-300 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" required />
+          <input type="email" id="email" name="email" value={personalInfo.email} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" required />
         </div>
 
         {/* Phone */}
@@ -83,7 +83,7 @@ export default function PersonalInfoForm() {
           <label htmlFor="phone" className="font-bold">
             Phone:
           </label>
-          <input type="tel" id="phone" name="phone" value={personalInfo.phone} onChange={handleChange} className="bg-gray-300 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" />
+          <input type="tel" id="phone" name="phone" value={personalInfo.phone} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
         </div>
 
         {/* Web */}
@@ -91,7 +91,7 @@ export default function PersonalInfoForm() {
           <label htmlFor="web" className="font-bold">
             Website:
           </label>
-          <input type="url" id="web" name="web" value={personalInfo.web} onChange={handleChange} className="bg-gray-300 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" />
+          <input type="url" id="web" name="web" value={personalInfo.web} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
         </div>
 
         {/* Address */}
@@ -99,7 +99,7 @@ export default function PersonalInfoForm() {
           <label htmlFor="address" className="font-bold">
             Address:
           </label>
-          <textarea id="address" name="address" value={personalInfo.address} onChange={handleChange} className="bg-gray-300 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" rows={3} />
+          <textarea id="address" name="address" value={personalInfo.address} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" rows={3} />
         </div>
 
         {/* ... (other form fields) ... */}
@@ -108,7 +108,7 @@ export default function PersonalInfoForm() {
           <label htmlFor="avatar" className="font-bold mt-2">
             Avatar:
           </label>
-          {/* <input type="file" accept="image/*" id="avatar" name="avatar" onChange={handleAvatarChange} className="bg-gray-300 p-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500" /> */}
+          {/* <input type="file" accept="image/*" id="avatar" name="avatar" onChange={handleAvatarChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" /> */}
           <IKContext publicKey="public_D3R2YXCqESRUwCNMgLufGCsa8GY=" urlEndpoint="https://ik.imagekit.io/odinbook" authenticator={Authenticator}>
             <IKUpload id="imageInput" accept="image/*" validateFile={validateFileFunction} fileName="avatar.png" onSuccess={onSuccess} />
           </IKContext>
