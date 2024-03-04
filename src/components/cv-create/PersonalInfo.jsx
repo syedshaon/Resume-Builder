@@ -8,19 +8,21 @@ export default function PersonalInfoForm() {
   const [imgKitImgUrl, setImgKitImgUrl] = useState("");
 
   const onSuccess = (res) => {
-    console.log("Success", res.filePath);
+    console.log("Success", res.url);
     // setImgKitImgUrl(res.url);
     setPersonalInfo((prev) => ({ ...prev, avatar: res.url }));
   };
   const onUploadProgress = (e) => {
+    e.preventDefault();
     console.log("Progress", e);
   };
-  const onUploadStart = (state) => {
-    console.log("upload started");
-    console.log(state);
+  const onUploadStart = (e) => {
+    e.preventDefault();
+
+    console.log("upload started", e);
   };
   const handleThumbnailChange = (e) => {
-    console.log("Thumbnail Changed");
+    e.preventDefault();
     console.log("Thumbnail Changed", e);
   };
   const validateFileFunction = (file) => {
