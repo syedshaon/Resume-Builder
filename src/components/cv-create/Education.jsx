@@ -71,11 +71,11 @@ export default function EducationForm() {
   return (
     <>
       <div>
-        <h3 className="bg-gray-700 text-white p-4">Education</h3>
+        <h3 className="bg-gray-700 text-white px-4 py-2">Education</h3>
         {education.map((item) => (
-          <div key={item.id} className="relative mb-3">
+          <div key={item.id} className="relative mb-1">
             <h6 className="mb-0">
-              <button onClick={() => toggleAccordionItem(item.id)} className="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500">
+              <button onClick={() => toggleAccordionItem(item.id)} className="relative flex items-center w-full p-4 py-2 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500">
                 <span>{item.degree}</span>
                 {item.expand && <FaChevronUp className="absolute right-0 pt-1 text-base transition-transform" />}
 
@@ -142,11 +142,9 @@ export default function EducationForm() {
               <div className="mt-5 flex justify-between items-center">
                 <div className="flex items-center mt-2 space-x-2">
                   <input type="checkbox" id="visible" name="visible" checked={item.visible} onChange={() => setvisible(item.id, item.visible)} className="border rounded focus:outline-none     w-5 h-5   accent-slate-900  cursor-pointer  " />
-                  <label htmlFor="visible" className="font-medium text-lg">
-                    Show on Resume
-                  </label>
+                  <label htmlFor="visible">Show on Resume</label>
                 </div>
-                <button onClick={addAnotherItem} className="bg-gray-700 hover:bg-gray-950 text-white   p-2">
+                <button onClick={addAnotherItem} className="bg-gray-700 hover:bg-gray-950 text-white text-xs  py-1 px-2">
                   Add Another Education
                 </button>
               </div>

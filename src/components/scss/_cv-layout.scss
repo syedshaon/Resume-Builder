@@ -48,8 +48,8 @@
     display: none !important;
   }
   .eduEx-wrapper {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 .leftSkill.cv-show {
@@ -58,10 +58,11 @@
   // column-gap: 20px;
   .eduEx-wrapper {
     padding-left: 20px;
-    padding-right: 40px;
+    padding-right: 60px;
   }
   .cv-child.others {
-    padding-left: 40px;
+    padding-left: 60px;
+    padding-right: 20px;
   }
 }
 
@@ -72,16 +73,18 @@
   // column-gap: 20px;
   .eduEx-wrapper {
     padding-left: 20px;
-    padding-right: 40px;
+    padding-right: 60px;
     padding-top: 60px;
     min-height: 1120px;
   }
   .cv-child.others {
-    padding-left: 40px;
+    padding-left: 60px;
+    padding-right: 20px;
   }
   .cv-child.person {
     // display: block;
     // max-width: 300px;
+    padding-right: 20px;
     overflow: hidden;
     grid-template-columns: 1fr;
     grid-template-rows: auto;

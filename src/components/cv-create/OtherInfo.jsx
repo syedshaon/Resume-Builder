@@ -44,12 +44,12 @@ export default function OtherInfoForm() {
 
   return (
     <div className="flex flex-col ">
-      <div className="  mb-6">
-        <h3 className="bg-gray-700 text-white p-4">Other Information</h3>
+      <div className="  mb-2">
+        <h3 className="bg-gray-700 text-white  px-4 py-2">Other Information</h3>
         {otherInfo.map((item) => (
-          <div key={item.id} className="relative mb-3">
+          <div key={item.id} className="relative mb-1">
             <h6 className="mb-0">
-              <button onClick={() => toggleAccordionItem(item.id)} className="relative flex items-center w-full p-4 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500">
+              <button onClick={() => toggleAccordionItem(item.id)} className="relative flex items-center w-full p-4 py-2 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500">
                 <span>{item.title}</span>
                 {item.expand && <FaChevronUp className="absolute right-0 pt-1 text-base transition-transform" />}
                 {!item.expand && <FaChevronDown className="absolute right-0 pt-1 text-base transition-transform" />}
@@ -76,19 +76,17 @@ export default function OtherInfoForm() {
                 </span>
               </div>
 
-              <div className="mt-5 flex justify-between items-center">
+              <div className="mt-2 flex justify-between items-center">
                 <div className="flex items-center mt-2 space-x-2">
                   <input type="checkbox" id={`visible_${item.id}`} name={`visible_${item.id}`} checked={item.visible} onChange={() => setvisible(item.id, item.visible)} className="border rounded focus:outline-none w-5 h-5 accent-slate-900 cursor-pointer" />
-                  <label htmlFor={`visible_${item.id}`} className="font-medium text-lg">
-                    Show on Resume
-                  </label>
+                  <label htmlFor={`visible_${item.id}`}>Show on Resume</label>
                 </div>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <button onClick={addAnotherItem} className="bg-gray-700 hover:bg-gray-950 text-white ml-auto   p-2 ">
+      <button onClick={addAnotherItem} className="bg-gray-700 hover:bg-gray-950 text-white ml-auto   text-xs  py-1 px-2">
         Add Another Information
       </button>
     </div>

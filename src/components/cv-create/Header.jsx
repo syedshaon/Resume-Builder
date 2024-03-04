@@ -26,18 +26,18 @@ export default function Header() {
 
       <div className="flex justify-between items-center w-full">
         <button disabled={showEdit} onClick={editContent} title="Edit">
-          <FaEdit className="  text-gray-700 hover:text-gray-950 text-xl w-10 " />
+          <FaEdit className="   text-gray-700 hover:text-gray-950     text-xl transition-all hover:text-2xl w-10 " />
         </button>
 
         <button disabled={!showEdit} onClick={personalize} title="Personalize">
-          <FaMagic className=" text-gray-700 hover:text-gray-950 text-xl w-10 " />
+          <FaMagic className=" text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " />
         </button>
 
         <LoadSample />
 
-        <FaCloudDownloadAlt title="download pdf" className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl w-10 " onClick={downloadPdf} />
+        <FaCloudDownloadAlt title="download pdf" className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " onClick={downloadPdf} />
         <a title="How To?" href="https://www.youtube.com/" target="_blank">
-          <FaQuestion className="  text-gray-700 hover:text-gray-950 text-xl w-10 " />
+          <FaQuestion className="  text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " />
         </a>
 
         <HeaderAuth />

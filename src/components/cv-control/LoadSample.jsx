@@ -13,12 +13,14 @@ function LoadSample() {
       phone: "01888-256545",
       web: "john-cina.com",
       address: "Rajuk, Dhaka",
-      avatar: null,
+      avatar: "https://ik.imagekit.io/odinbook/avatar_BoTNSJ_qH.png",
+      showAvatar: true,
       expand: false,
     });
     setEducation([
       {
-        school: "University of Georgia 1",
+        id: 1,
+        school: "University of Georgia",
         degree: "Bachelor of Science in Computer Science",
         result: "3.8 out of 4",
         startDate: "August 2019",
@@ -29,7 +31,8 @@ function LoadSample() {
         expand: false,
       },
       {
-        school: "Udemy University 2",
+        id: 2,
+        school: "Udemy University",
         degree: "Full-Stack Web Development",
         result: "3.8 out of 4",
         startDate: "January 2022",
@@ -39,31 +42,22 @@ function LoadSample() {
         visible: true,
         expand: false,
       },
-      {
-        school: "Example University 3",
-        degree: "Full-Stack Web Development",
-        result: "3.8 out of 4",
-        startDate: "January 2022",
-        endDate: "June 2022",
-        location: "San Francisco, USA",
-        summary: ["Completed an intensive bootcamp focused on modern web development technologies."],
-        visible: true,
-        expand: false,
-      },
     ]);
 
     setExperience([
       {
+        id: 1,
         company: "Stark Corp",
         jobTitle: "Software Engineer",
         startDate: "June 2019",
         endDate: "Present",
         location: "San Francisco, USA",
-        summary: ["PSD to HTML5, PSD to WordPress", "PSD to HTML5, PSD to WordPress", "PSD to HTML5, PSD to WordPress"],
+        summary: ["PSD, Figma to React", "WordPress to Next.js static site", "PSD to HTML5, PSD to WordPress"],
         visible: true,
         expand: false,
       },
       {
+        id: 2,
         company: "Wayne Corp",
         jobTitle: "Junior Developer",
         startDate: "March 2018",
@@ -77,35 +71,38 @@ function LoadSample() {
 
     setReferences([
       {
+        id: 1,
         referer: "Tony Stark",
         title: "CEO Stark Corp.",
-        phone: "+1 123-666-7777",
+        phone: "444-666-7777",
         visible: true,
         expand: false,
       },
       {
+        id: 2,
         referer: "Bruce Wayne",
-        title: "CEO Wayne Corp.",
-        phone: "+1 123-333-5555",
+        title: "CTO Wayne Corp.",
+        phone: "123-333-5555",
         visible: true,
         expand: false,
       },
     ]);
 
-    setSkills({ skills: ["JavaScript", "ReactJS", "MERN", "SCSS", "TailWindCSS", "Redux"], visible: true, expand: false });
+    setSkills({ skills: ["JavaScript", "ReactJS", "Next.js", "MERN", "SCSS", "TailWindCSS", "Redux"], visible: true, expand: false });
     setOtherInfo([
       { id: 1, title: "Languages", summary: ["English", "Bengali"], visible: true, expand: false },
       { id: 2, title: "Hobbies", summary: ["Biking", "Watching Movies"], visible: true, expand: false },
     ]);
 
-    setHColor("#ffffff");
-    setEdxpColor("#ffffff");
-    setCColor("#ffffff");
-    setSColor("#ffffff");
-    setFColor("#374151");
-    setIColor("#374151");
+    setHColor("#179EA1");
+    setCColor("#179EA1");
+    setSColor("#179EA1");
+    setEdxpColor("#08AFAF");
+    setFColor("#ffffff");
+    setIColor("#FECE00");
+    document.documentElement.style.setProperty("--icon", "#FECE00");
   };
-  return <FaRobot title="Generate Sample" className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl w-10 " onClick={loadData} />;
+  return <FaRobot title="Generate Sample" className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " onClick={loadData} />;
 }
 
 export default LoadSample;

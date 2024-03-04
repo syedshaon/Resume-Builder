@@ -9,7 +9,8 @@ import OtherInfoForm from "./OtherInfo";
 import Personalize from "../cv-control/Personalize";
 
 import { useAuthContext } from "@/context/AuthContext";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import StoreData from "../cv-control/storeData";
 
 export default function CreateCV() {
   const { personalInfo, showEdit } = useAuthContext();
@@ -22,6 +23,7 @@ export default function CreateCV() {
 
   return (
     <div className="builder cv-create mt-[30px]  self-start">
+      <StoreData />
       <Header />
       <div className="personalize-area" style={{ display: !showEdit ? "block" : "none" }}>
         <Personalize />

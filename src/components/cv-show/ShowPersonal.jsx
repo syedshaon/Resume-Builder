@@ -18,7 +18,7 @@ export default function ShowPersonal() {
       </div>
 
       {/* <div className="person-img" style={backgroundImageStyle} /> */}
-      <Image width={100} height={100} src={personalInfo.avatar} className="person-img" style={backgroundImageStyle} />
+      <Image priority alt={personalInfo.name} width={120} height={120} src={personalInfo.avatar} className="person-img" style={backgroundImageStyle} />
 
       <div className="person-contact">
         <p className="person-emails">

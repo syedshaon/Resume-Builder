@@ -1,13 +1,12 @@
 "use client";
 import { useAuthContext } from "@/context/AuthContext";
+import { FcGoogle } from "react-icons/fc";
 
 // import { auth } from "@/auth";
 
 import * as actions from "@/actions/index";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
 
 export default function HeaderAuth() {
   const { user, loading } = useAuthContext();
@@ -46,7 +45,7 @@ export default function HeaderAuth() {
 
           <div>
             <form action={actions.handleSignOut}>
-              <button title="Sign Out" className="text-white p-2 px-4    bg-gray-700 hover:bg-gray-950" type="submit">
+              <button title="Sign Out" className="text-gray-700 hover:text-white hover:bg-gray-700 transition-all font-bold py-2 px-6   border border-gray-700 " type="submit">
                 Sign Out
               </button>
             </form>
@@ -56,8 +55,9 @@ export default function HeaderAuth() {
     } else {
       authContent = (
         <div className="ml-auto flex  justify-end   items-center">
-          <button onClick={handleSignInWithGoogle} title="Sign In to track progress!" className="text-white p-2    bg-gray-700">
-            Sign In to track progress!
+          <button onClick={handleSignInWithGoogle} title="Sign In to track progress!" className="text-gray-700 hover:text-white hover:bg-gray-700 transition-all font-bold py-2 px-6   border border-gray-700  ">
+            <FcGoogle />
+            Sign In
           </button>
         </div>
       );
