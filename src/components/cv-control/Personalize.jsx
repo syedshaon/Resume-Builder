@@ -70,6 +70,8 @@ function Personalize() {
     // enable sidepanel
     setSkills((skills) => ({ ...skills, visible: false }));
 
+    setPersonalInfo((prev) => ({ ...prev, showAvatar: false }));
+
     setOtherInfo((prev) => prev.map((pre) => ({ ...pre, visible: false })));
 
     // disable LEFT sidepanel
