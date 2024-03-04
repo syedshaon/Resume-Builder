@@ -85,57 +85,55 @@ export default function EducationForm() {
 
             <div className={`${item.expand && "expanded py-4"} expandle px-2   text-sm leading-normal text-blue-gray-500/80 border shadow`}>
               <div className="flex flex-col space-y-2">
-                <label htmlFor="schoolName" className="font-bold">
+                <label htmlFor={`schoolName-${item.id}`} className="font-bold">
                   School Name:
                 </label>
-                <input type="text" id="schoolName" name="schoolName" value={item.school} onChange={(e) => setSchoolName(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" required />
+                <input type="text" name={`schoolName-${item.id}`} id={`schoolName-${item.id}`} value={item.school} onChange={(e) => setSchoolName(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" required />
               </div>
 
               <div className="flex flex-col space-y-2">
-                <label htmlFor="degree" className="font-bold mt-2">
+                <label htmlFor={`degree-${item.id}`} className="font-bold mt-2">
                   Degree:
                 </label>
-                <input type="text" id="degree" name="degree" value={item.degree} onChange={(e) => setDegree(item.id, e.target.value)} className="bg-gray-300 p-2 border focus:outline-none focus:ring-1 focus:ring-blue-500" required />
+                <input type="text" id={`degree-${item.id}`} name={`degree-${item.id}`} value={item.degree} onChange={(e) => setDegree(item.id, e.target.value)} className="bg-gray-300 p-2 border focus:outline-none focus:ring-1 focus:ring-blue-500" required />
               </div>
 
               <div className="flex flex-col space-y-2">
-                <label htmlFor="result" className="font-bold mt-2">
+                <label htmlFor={`result-${item.id}`} className="font-bold mt-2">
                   Result/Grade:
                 </label>
-                <input type="text" id="result" name="result" value={item.result} onChange={(e) => setResult(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                <input type="text" id={`result-${item.id}`} name={`result-${item.id}`} value={item.result} onChange={(e) => setResult(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
               </div>
 
               <div className="grid grid-cols-1 gap-4">
                 <div className="flex flex-col space-y-2">
-                  <label htmlFor="startDate" className="font-bold mt-2">
+                  <label htmlFor={`edu-startDate-${item.id}`} className="font-bold mt-2">
                     Start Date:
                   </label>
-                  <input type="text" id="startDate" name="startDate" value={item.startDate} onChange={(e) => setStartDate(item.id, e.target.value)} className=" bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                  <input type="text" id={`edu-startDate-${item.id}`} name={`edu-startDate-${item.id}`} value={item.startDate} onChange={(e) => setStartDate(item.id, e.target.value)} className=" bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
                 </div>
 
                 <div className="flex flex-col space-y-2">
-                  <label htmlFor="endDate" className="font-bold mt-2">
+                  <label htmlFor={`edu-endDate-${item.id}`} className="font-bold mt-2">
                     End Date:
                   </label>
-                  <input type="text" id="endDate" name="endDate" value={item.endDate} onChange={(e) => setEndDate(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                  <input type="text" id={`edu-endDate-${item.id}`} name={`edu-endDate-${item.id}`} value={item.endDate} onChange={(e) => setEndDate(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
                 </div>
               </div>
 
               <div className="flex flex-col space-y-2">
-                <label htmlFor="location" className="font-bold mt-2">
+                <label htmlFor={`edu-location-${item.id}`} className="font-bold mt-2">
                   Location:
                 </label>
-                <input type="text" id="location" name="location" value={item.location} onChange={(e) => setLocation(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                <input type="text" id={`edu-location-${item.id}`} name={`edu-location-${item.id}`} value={item.location} onChange={(e) => setLocation(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
               </div>
               <div className="flex flex-col space-y-2 relative additional">
-                <label htmlFor="additionalInfo" className="  mt-2 font-bold">
-                  Additional Info:
-                </label>
+                <span className="  mt-2 font-bold">Additional Info:</span>
                 {item.summary.map((val, index) => {
                   return (
                     <div key={index} className="addition-holder flex w-full">
-                      <label className="hidden" htmlFor={`summary-${index}`}>{`summary-${index}`}</label>
-                      <input name={`summary-${index}`} onChange={(e) => setSummary(item.id, index, e.target.value)} type="text" value={val} className="w-full bg-gray-300 p-2 border   focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                      <label className="hidden" htmlFor={`edu-summary-${index}-${item.id}`}>{`summary-${index}`}</label>
+                      <input id={`edu-summary-${index}-${item.id}`} name={`edu-summary-${index}-${item.id}`} onChange={(e) => setSummary(item.id, index, e.target.value)} type="text" value={val} className="w-full bg-gray-300 p-2 border   focus:outline-none focus:ring-1 focus:ring-blue-500" />
                     </div>
                   );
                 })}
@@ -146,8 +144,8 @@ export default function EducationForm() {
 
               <div className="mt-5 flex justify-between items-center">
                 <div className="flex items-center mt-2 space-x-2">
-                  <input type="checkbox" id="visible" name="visible" checked={item.visible} onChange={() => setvisible(item.id, item.visible)} className="border  focus:outline-none     w-5 h-5   accent-slate-900  cursor-pointer  " />
-                  <label htmlFor="visible">Show on Resume</label>
+                  <input type="checkbox" name={`edu-visible-${item.id}`} id={`edu-visible-${item.id}`} checked={item.visible} onChange={() => setvisible(item.id, item.visible)} className="border  focus:outline-none     w-5 h-5   accent-slate-900  cursor-pointer  " />
+                  <label htmlFor={`edu-visible-${item.id}`}>Show on Resume</label>
                 </div>
                 <button onClick={addAnotherItem} className="bg-gray-700 hover:bg-gray-950 text-white text-xs  py-1 px-2">
                   Add Another Education

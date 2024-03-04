@@ -55,23 +55,23 @@ export default function ReferencesForm() {
               </div>
 
               <div className="flex flex-col space-y-2">
-                <label htmlFor={`title_${item.id}`} className="font-bold mt-2">
+                <label htmlFor={`referer-title_${item.id}`} className="font-bold mt-2">
                   Title:
                 </label>
-                <input type="text" id={`title_${item.id}`} name={`title_${item.id}`} value={item.title} onChange={(e) => handleChange(item.id, "title", e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                <input type="text" id={`referer-title_${item.id}`} name={`referer-title_${item.id}`} value={item.title} onChange={(e) => handleChange(item.id, "title", e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
               </div>
 
               <div className="flex flex-col space-y-2">
-                <label htmlFor={`phone_${item.id}`} className="font-bold mt-2">
+                <label htmlFor={`referer-phone_${item.id}`} className="font-bold mt-2">
                   Phone:
                 </label>
-                <input type="text" id={`phone_${item.id}`} name={`phone_${item.id}`} value={item.phone} onChange={(e) => handleChange(item.id, "phone", e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                <input type="text" id={`referer-phone_${item.id}`} name={`referer-phone_${item.id}`} value={item.phone} onChange={(e) => handleChange(item.id, "phone", e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
               </div>
 
               <div className="mt-5 flex justify-between items-center">
                 <div className="flex items-center mt-2 space-x-2">
-                  <input type="checkbox" id="visible" name="visible" checked={item.visible} onChange={() => setvisible(item.id, item.visible)} className="border  focus:outline-none     w-5 h-5   accent-slate-900  cursor-pointer  " />
-                  <label htmlFor="visible">Show on Resume</label>
+                  <input type="checkbox" name={`referer-visible-${item.id}`} id={`referer-visible-${item.id}`} checked={item.visible} onChange={() => setvisible(item.id, item.visible)} className="border  focus:outline-none     w-5 h-5   accent-slate-900  cursor-pointer  " />
+                  <label htmlFor={`referer-visible-${item.id}`}>Show on Resume</label>
                 </div>
                 <button onClick={addAnotherItem} className="bg-gray-700 hover:bg-gray-950 text-white   text-xs  py-1 px-2">
                   Add Another Reference

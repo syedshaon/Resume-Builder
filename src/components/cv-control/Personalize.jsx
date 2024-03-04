@@ -99,25 +99,25 @@ function Personalize() {
         <h3 className="design-title">Select a Layout</h3>
         <div className="color">
           <div className="color-picker font">
-            <input type="color" value={fColor} onChange={(e) => setFColor(e.target.value)} name="fColor" />
+            <input id="fColor" type="color" value={fColor} onChange={(e) => setFColor(e.target.value)} name="fColor" />
             <label htmlFor="fColor">Text Color</label>
           </div>
           <div className="color-picker icon">
-            <input type="color" value={iColor} onChange={handleIColor} name="iColor" />
+            <input id="iColor" type="color" value={iColor} onChange={handleIColor} name="iColor" />
             <label htmlFor="iColor">Icon Color</label>
           </div>
         </div>
         <div className="color">
           <div className="color-picker header">
-            <input type="color" value={hColor} onChange={(e) => setHColor(e.target.value)} name="hColor" />
+            <input id="hColor" type="color" value={hColor} onChange={(e) => setHColor(e.target.value)} name="hColor" />
             <label htmlFor="hColor">Header Background</label>
           </div>
           <div className="color-picker content">
-            <input type="color" value={cColor} onChange={setContentColor} name="cColor" />
+            <input id="cColor" type="color" value={cColor} onChange={setContentColor} name="cColor" />
             <label htmlFor="cColor">Content Background</label>
           </div>
           <div className="color-picker sidebar">
-            <input type="color" value={sColor} onChange={(e) => setSColor(e.target.value)} name="sColor" />
+            <input id="sColor" type="color" value={sColor} onChange={(e) => setSColor(e.target.value)} name="sColor" />
             <label htmlFor="sColor">Sidebar Background</label>
           </div>
         </div>

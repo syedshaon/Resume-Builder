@@ -80,10 +80,10 @@ export default function PersonalInfoForm() {
 
         {/* Phone */}
         <div className="flex flex-col space-y-2">
-          <label htmlFor="phone" className="font-bold">
+          <label htmlFor="phone-personal" className="font-bold">
             Phone:
           </label>
-          <input type="tel" id="phone" name="phone" value={personalInfo.phone} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
+          <input type="tel" id="phone-personal" name="phone-personal" value={personalInfo.phone} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
         </div>
 
         {/* Web */}
@@ -105,12 +105,12 @@ export default function PersonalInfoForm() {
         {/* ... (other form fields) ... */}
 
         <div className="flex flex-col space-y-2">
-          <label htmlFor="avatar" className="font-bold mt-2">
+          <label htmlFor="imageInput" className="font-bold mt-2">
             Avatar:
           </label>
           {/* <input type="file" accept="image/*" id="avatar" name="avatar" onChange={handleAvatarChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" /> */}
           <IKContext publicKey="public_D3R2YXCqESRUwCNMgLufGCsa8GY=" urlEndpoint="https://ik.imagekit.io/odinbook" authenticator={Authenticator}>
-            <IKUpload id="imageInput" accept="image/*" validateFile={validateFileFunction} fileName="avatar.png" onSuccess={onSuccess} />
+            <IKUpload id="imageInput" name="imageInput" accept="image/*" validateFile={validateFileFunction} fileName="avatar.png" onSuccess={onSuccess} />
           </IKContext>
         </div>
       </div>

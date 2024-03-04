@@ -58,21 +58,19 @@ export default function OtherInfoForm() {
 
             <div className={`${item.expand && "expanded py-4"} expandle px-2   text-sm leading-normal text-blue-gray-500/80 border shadow`}>
               <div className="flex flex-col space-y-2">
-                <label htmlFor={`title_${item.id}`} className="font-bold">
+                <label htmlFor={`other-title_${item.id}`} className="font-bold">
                   Title:
                 </label>
-                <input type="text" id={`title_${item.id}`} name={`title_${item.id}`} value={item.title} onChange={(e) => setInfoTitle(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" required />
+                <input type="text" name={`other-title_${item.id}`} id={`other-title_${item.id}`} value={item.title} onChange={(e) => setInfoTitle(item.id, e.target.value)} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" required />
               </div>
 
               <div className="flex flex-col space-y-2 relative additional">
-                <label htmlFor={`summary_${item.id}`} className="  mt-2 font-bold">
-                  Summary:
-                </label>
+                <span className="  mt-2 font-bold">Summary:</span>
                 {item.summary.map((val, index) => {
                   return (
                     <div key={index} className="addition-holder flex w-full">
-                      <label className="hidden" htmlFor={`summary-${index}`}>{`summary-${index}`}</label>
-                      <input name={`summary-${index}`} onChange={(e) => setSummary(item.id, index, e.target.value)} type="text" value={val} className="w-full bg-gray-300 p-2 border   focus:outline-none focus:ring-1 focus:ring-blue-500" />
+                      <label className="hidden" htmlFor={`other-summary-${index}-${item.id}`}>{`other-summary-${index}`}</label>
+                      <input name={`other-summary-${index}-${item.id}`} id={`other-summary-${index}-${item.id}`} onChange={(e) => setSummary(item.id, index, e.target.value)} type="text" value={val} className="w-full bg-gray-300 p-2 border   focus:outline-none focus:ring-1 focus:ring-blue-500" />
                     </div>
                   );
                 })}
@@ -83,8 +81,8 @@ export default function OtherInfoForm() {
 
               <div className="mt-2 flex justify-between items-center">
                 <div className="flex items-center mt-2 space-x-2">
-                  <input type="checkbox" id={`visible_${item.id}`} name={`visible_${item.id}`} checked={item.visible} onChange={() => setvisible(item.id, item.visible)} className="border  focus:outline-none w-5 h-5 accent-slate-900 cursor-pointer" />
-                  <label htmlFor={`visible_${item.id}`}>Show on Resume</label>
+                  <input type="checkbox" name={`other-visible_${item.id}`} id={`other-visible_${item.id}`} checked={item.visible} onChange={() => setvisible(item.id, item.visible)} className="border  focus:outline-none w-5 h-5 accent-slate-900 cursor-pointer" />
+                  <label htmlFor={`other-visible_${item.id}`}>Show on Resume</label>
                 </div>
               </div>
             </div>

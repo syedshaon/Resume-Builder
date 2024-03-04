@@ -30,11 +30,11 @@ export default function SkillsForm({ onSubmit }) {
           <div className="px-2 py-2 text-sm leading-normal text-blue-gray-500/80   flex flex-wrap justify-evenly gap-2">
             {skills.skills.map((skill, index) => (
               <div key={index} className="flex flex-col space-y-2 w-2/5 ">
-                <label htmlFor={`skill_${index}`} className="font-bold">
+                <label htmlFor={`skill_${index}-${skill.id}`} className="font-bold">
                   Skill {index + 1}:
                 </label>
                 <div className="flex items-center ">
-                  <input type="text" id={`skill_${index}`} name={`skill_${index}`} value={skill} onChange={(e) => handleSkillChange(index, e.target.value)} className="  bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" required />
+                  <input type="text" name={`skill_${index}-${skill.id}`} id={`skill_${index}-${skill.id}`} value={skill} onChange={(e) => handleSkillChange(index, e.target.value)} className="  bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" required />
                   {index === skills.skills.length - 1 && (
                     <span className="ml-2 text-xl cursor-pointer text-gray-700 hover:text-gray-950" onClick={addSkill}>
                       +
@@ -44,7 +44,7 @@ export default function SkillsForm({ onSubmit }) {
               </div>
             ))}
             <div className="flex items-center mt-3 space-x-2">
-              <input type="checkbox" id="visible_skills" name="visible_skills" checked={skills.visible} onChange={() => setSkills((prev) => ({ ...prev, visible: !prev.visible }))} className="border  focus:outline-none w-5 h-5 accent-slate-900 cursor-pointer" />
+              <input type="checkbox" name="visible_skills" id="visible_skills" checked={skills.visible} onChange={() => setSkills((prev) => ({ ...prev, visible: !prev.visible }))} className="border  focus:outline-none w-5 h-5 accent-slate-900 cursor-pointer" />
               <label htmlFor="visible_skills">Show on Resume</label>
             </div>
           </div>
