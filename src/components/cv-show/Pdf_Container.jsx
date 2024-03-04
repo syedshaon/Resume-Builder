@@ -13,8 +13,8 @@ function Pdf_Container() {
 
   const imgShow = personalInfo.showAvatar ? "showImg" : "noShowImg";
 
-  const noSkill = skills.visible || otherInfo.every((item) => item.visible) ? "" : ` noSkill `;
-  const leftSkill = (skills.visible || otherInfo.every((item) => item.visible)) && leftSkillVal ? `leftSkill` : ` `;
+  const noSkill = skills.visible || otherInfo.some((item) => item.visible) ? "" : ` noSkill `;
+  const leftSkill = (skills.visible || otherInfo.some((item) => item.visible)) && leftSkillVal ? `leftSkill` : ` `;
 
   return (
     <div className="cv-show-wrapper" id="print" style={{ color: fColor }}>

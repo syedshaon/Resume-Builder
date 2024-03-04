@@ -83,7 +83,7 @@ export default function PersonalInfoForm() {
           <label htmlFor="phone-personal" className="font-bold">
             Phone:
           </label>
-          <input type="tel" id="phone-personal" name="phone-personal" value={personalInfo.phone} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
+          <input type="tel" id="phone-personal" name="phone" value={personalInfo.phone} onChange={handleChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" />
         </div>
 
         {/* Web */}
