@@ -9,9 +9,6 @@
 
   box-shadow: 0px 0px 10px 10px #0c410749;
 
-  grid-template-columns: 40px 3fr 1fr;
-  // column-gap: 40px;
-  grid-template-rows: auto;
   grid-template-areas: "person person person" "eduEx eduEx others";
   display: grid;
   align-content: stretch;

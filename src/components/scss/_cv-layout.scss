@@ -26,9 +26,17 @@
   padding: 30px;
 }
 // Layout 1: Default Layout
+.cv-show {
+  grid-template-columns: 40px 3fr 1fr;
+  // column-gap: 40px;
+  grid-template-rows: 204px auto;
+}
 .noShowImg .eduEx-wrapper {
   min-height: 950px;
 }
+// .person {
+//   align-self: self-start;
+// }
 // Extra Layout Starts
 
 // Layout 2: No Image Center Top

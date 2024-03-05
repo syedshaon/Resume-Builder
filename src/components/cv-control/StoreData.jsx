@@ -125,7 +125,7 @@ export default function StoreData() {
       const userData = await getUserDataByEmail();
       // console.log(userData.data);
       if (userData.data) {
-        const userConfirms = window.confirm("Would you like to restore your previous data? If Not, your previous data will get lost!");
+        const userConfirms = window.confirm("Would you like to restore your previous CLOUD data? If Not, your previous data will get lost!");
         if (userConfirms) {
           setPersonalInfo(userData.data.personalInfo);
           setEducation(userData.data.education);
@@ -152,7 +152,7 @@ export default function StoreData() {
     const restoreUserDataFromLocalStorage = () => {
       const userDataString = localStorage.getItem("userData");
       if (userDataString) {
-        const userConfirms = window.confirm("Would you like to restore your previous data? If Not, your previous data will get lost!");
+        const userConfirms = window.confirm("Would you like to restore your previous LOCAL data? If Not, your previous data will get lost!");
         if (userConfirms) {
           const userData = JSON.parse(userDataString);
           setPersonalInfo(userData.personalInfo);
@@ -177,12 +177,14 @@ export default function StoreData() {
       }
     };
 
-    if (user) {
-      fetchData();
-    } else {
-      restoreUserDataFromLocalStorage();
+    if (!loading) {
+      if (user) {
+        fetchData();
+      } else {
+        restoreUserDataFromLocalStorage();
+      }
     }
-  }, [user]);
+  }, [user, loading]);
 
   useEffect(() => {
     if (user) {
@@ -200,7 +202,7 @@ export default function StoreData() {
       // Clean up the interval when the component unmounts
       return () => clearInterval(intervalId);
     }
-  }, [user, personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iColor, edxColor, showEdit, leftSkillVal, allLeftVal]);
+  }, [user, loading, personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iColor, edxColor, showEdit, leftSkillVal, allLeftVal]);
 
   return (
     <>
