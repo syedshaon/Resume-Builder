@@ -49,6 +49,7 @@ function Pdf_Container() {
   return (
     <div className="cv-show-wrapper" id="print" style={{ color: fColor }}>
       <div ref={cvShowRef} style={{ minHeight: `${cvShowHeight}px` }} className={`cv-show ${noSkill} ${imgShow} ${leftSkill} ${allLeftVal && "allLeft"}`}>
+        {/*     <div ref={cvShowRef} style={{ minHeight: `${cvShowHeight}px` }} className={`cv-show ${noSkill} ${imgShow} ${leftSkill} ${allLeftVal && "allLeft"}`}> */}
         <ShowPersonal />
 
         <div className="cv-child eduEx-wrapper" style={{ backgroundColor: edxColor }}>

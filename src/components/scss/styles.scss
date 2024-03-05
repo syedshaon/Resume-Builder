@@ -19,9 +19,15 @@
 // }
 // }
 
-.cv-show-wrapper {
-  height: 100vh;
-  overflow-y: scroll;
+// .cv-show-wrapper {
+//   height: 100vh;
+//   overflow-y: scroll;
+// }
+@media screen and (min-width: 1300px) {
+  .cv-show-wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+  }
 }
 @media print {
   .cv-show-wrapper {

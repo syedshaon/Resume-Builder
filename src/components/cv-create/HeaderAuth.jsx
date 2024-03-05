@@ -45,7 +45,7 @@ export default function HeaderAuth() {
 
           <div>
             <form action={actions.handleSignOut}>
-              <button title="Sign Out" className="text-gray-700 hover:text-white hover:bg-gray-700 transition-all font-bold py-2 px-6   border border-gray-700 " type="submit">
+              <button title="Sign Out" className="text-gray-700 hover:text-white hover:bg-gray-700 transition-all font-bold py-2 px-2 sm:px-6   border border-gray-700 " type="submit">
                 Sign Out
               </button>
             </form>
@@ -55,7 +55,7 @@ export default function HeaderAuth() {
     } else {
       authContent = (
         <div className="ml-auto flex  justify-end   items-center">
-          <button onClick={handleSignInWithGoogle} title="Sign In to track progress!" className="text-gray-700 hover:text-white hover:bg-gray-700 transition-all font-bold py-2 px-6   border border-gray-700  ">
+          <button onClick={handleSignInWithGoogle} title="Sign In to track progress!" className="text-gray-700 hover:text-white hover:bg-gray-700 transition-all font-bold py-2 px-2 sm:px-6   border border-gray-700  ">
             <FcGoogle />
             Sign In
           </button>
