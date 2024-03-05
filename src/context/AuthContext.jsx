@@ -21,12 +21,12 @@ export function AuthContextProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   // Related to Resume color
-  const [hColor, setHColor] = useState("#ffffff");
-  const [edxColor, setEdxpColor] = useState("#ffffff");
-  const [cColor, setCColor] = useState("#ffffff");
-  const [sColor, setSColor] = useState("#ffffff");
-  const [fColor, setFColor] = useState("#374151");
-  const [iColor, setIColor] = useState("#374151");
+  const [hColor, setHColor] = useState("#5d8443");
+  const [edxColor, setEdxpColor] = useState("#779c5e");
+  const [cColor, setCColor] = useState("#779c5e");
+  const [sColor, setSColor] = useState("#6a8e52");
+  const [fColor, setFColor] = useState("#ffffff");
+  const [iColor, setIColor] = useState("#00ff88");
 
   const [personalInfo, setPersonalInfo] = useState({
     name: "John Cina",
@@ -46,8 +46,8 @@ export function AuthContextProvider({ children }) {
       school: "University of Georgia",
       degree: "Bachelor of Science in Computer Science",
       result: "3.8 out of 4",
-      startDate: "August 2019",
-      endDate: "May 2023",
+      startDate: "August 2018",
+      endDate: "May 2020",
       location: "Cityville, State",
       summary: ["Honors: Dean's List for four consecutive semesters.", " Ldipisicing elit. Id iure animi optio praesentium, voluptatem nisi"],
       visible: true,
@@ -58,8 +58,26 @@ export function AuthContextProvider({ children }) {
       school: "Udemy University",
       degree: "Full-Stack Web Development",
       result: "3.8 out of 4",
-      startDate: "January 2022",
-      endDate: "June 2022",
+      startDate: "January 2016",
+      endDate: "June 2018",
+      location: "San Francisco, USA",
+      summary: ["Completed an intensive bootcamp focused on modern web development technologies.", " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo, quam in quidem amet eligendi!"],
+      visible: true,
+      expand: false,
+    },
+    {
+      id: 3,
+      break: true,
+      visible: true,
+      expand: false,
+    },
+    {
+      id: 4,
+      school: "Google University",
+      degree: "Front-End Web Development",
+      result: "3 out of 4",
+      startDate: "January 2014",
+      endDate: "June 2016",
       location: "San Francisco, USA",
       summary: ["Completed an intensive bootcamp focused on modern web development technologies.", " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo, quam in quidem amet eligendi!"],
       visible: true,
@@ -86,7 +104,24 @@ export function AuthContextProvider({ children }) {
       startDate: "March 2018",
       endDate: "May 2019",
       location: "San Francisco, USA",
-      summary: ["Collaborated with senior developers to build and maintain client websites using the latest web technologies."],
+      summary: ["Collaborated with senior developers to build and maintain client websites using the latest web technologies.", "Edolor sit amet consectetur adipisicing elit. Illum recusandae ad corporis veritatis non asperiores", "Tassumenda reprehenderit totam tempore repudiandae", "Dssumenda reprehenderit totam tempore repudiandae"],
+      visible: true,
+      expand: false,
+    },
+    {
+      id: 3,
+      break: true,
+      visible: false,
+      expand: false,
+    },
+    {
+      id: 4,
+      company: "Robi Corp",
+      jobTitle: "Front-End Developer",
+      startDate: "March 2016",
+      endDate: "Feb 2018",
+      location: "San Francisco, USA",
+      summary: ["Edolor sit amet consectetur adipisicing elit. Illum recusandae ad corporis veritatis non asperiores", "Tassumenda reprehenderit totam tempore repudiandae", "Dssumenda reprehenderit totam tempore repudiandae"],
       visible: true,
       expand: false,
     },

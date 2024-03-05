@@ -19,7 +19,7 @@ function Pdf_Container() {
   // Related to cv height
 
   const cvShowRef = useRef(null);
-  const [cvShowHeight, setCvShowHeight] = useState(1124);
+  const [cvShowHeight, setCvShowHeight] = useState(1127);
 
   useEffect(() => {
     const updateCvShowHeight = () => {
@@ -30,10 +30,10 @@ function Pdf_Container() {
       console.log("contentHeight", contentHeight);
 
       // Calculate the multiple of 1132 for the grid's height
-      const multipleOf1800 = Math.ceil(contentHeight / 1132);
+      const multipleOf1800 = Math.ceil(contentHeight / 1127);
 
       // Set the grid's height
-      setCvShowHeight(multipleOf1800 * 1132);
+      setCvShowHeight(multipleOf1800 * 1127);
     };
 
     // Add height calculation initially and on content resize

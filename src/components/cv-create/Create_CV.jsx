@@ -22,7 +22,7 @@ export default function CreateCV() {
   }, [personalInfo]);
 
   return (
-    <div className="builder cv-create mt-[30px]  self-start">
+    <div className="builder cv-create my-[30px]  self-start">
       <StoreData />
       <Header />
       <div className="personalize-area" style={{ display: !showEdit ? "block" : "none" }}>
@@ -30,8 +30,9 @@ export default function CreateCV() {
       </div>
       <div className="edit-area" style={{ display: showEdit ? "block" : "none" }}>
         <PersonalInfoForm />
-        <EducationForm />
         <ExperienceForm />
+        <EducationForm />
+
         <ReferencesForm />
         <SkillsForm />
         <OtherInfoForm />

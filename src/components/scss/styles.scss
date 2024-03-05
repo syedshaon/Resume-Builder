@@ -19,7 +19,15 @@
 // }
 // }
 
+.cv-show-wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+}
 @media print {
+  .cv-show-wrapper {
+    height: auto;
+    overflow: hidden;
+  }
   body {
     // background-color: var(--bodyC);
     // Following to ensure graphics show up on mobile while printing
