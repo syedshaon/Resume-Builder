@@ -2,7 +2,7 @@ import { useAuthContext } from "@/context/AuthContext";
 import Image from "next/image";
 
 function Personalize() {
-  const { user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iColor, setIColor, edxColor, setEdxpColor, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal } = useAuthContext();
+  const { setPersonalInfo, setSkills, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iColor, setIColor, setEdxpColor, setLeftSkillVal, setLeftVal } = useAuthContext();
   function handleIColor(e) {
     setIColor(e.target.value);
     document.documentElement.style.setProperty("--icon", e.target.value);

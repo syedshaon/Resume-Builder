@@ -9,7 +9,7 @@ import ShowOthers from "./ShowOthers";
 import { useAuthContext } from "@/context/AuthContext";
 
 function Pdf_Container() {
-  const { user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iColor, setIColor, edxColor, setEdxpColor, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal } = useAuthContext();
+  const { personalInfo, skills, otherInfo, sColor, fColor, edxColor, leftSkillVal, allLeftVal } = useAuthContext();
 
   const imgShow = personalInfo.showAvatar ? "showImg" : "noShowImg";
 

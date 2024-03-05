@@ -9,7 +9,7 @@ import OtherInfoForm from "./OtherInfo";
 import Personalize from "../cv-control/Personalize";
 
 import { useAuthContext } from "@/context/AuthContext";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import StoreData from "../cv-control/StoreData";
 
 export default function CreateCV() {

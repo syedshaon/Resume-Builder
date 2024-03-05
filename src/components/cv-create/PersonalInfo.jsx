@@ -1,30 +1,16 @@
 import { useAuthContext } from "@/context/AuthContext";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { IKContext, IKUpload, IKImage } from "imagekitio-react";
-import { useState } from "react";
+import { IKContext, IKUpload } from "imagekitio-react";
+
 import Authenticator from "./Authenticator";
 export default function PersonalInfoForm() {
   const { personalInfo, setPersonalInfo } = useAuthContext();
-  const [imgKitImgUrl, setImgKitImgUrl] = useState("");
 
   const onSuccess = (res) => {
-    console.log("Success", res.url);
     // setImgKitImgUrl(res.url);
     setPersonalInfo((prev) => ({ ...prev, avatar: res.url }));
   };
-  const onUploadProgress = (e) => {
-    e.preventDefault();
-    console.log("Progress", e);
-  };
-  const onUploadStart = (e) => {
-    e.preventDefault();
 
-    console.log("upload started", e);
-  };
-  const handleThumbnailChange = (e) => {
-    e.preventDefault();
-    console.log("Thumbnail Changed", e);
-  };
   const validateFileFunction = (file) => {
     console.log("validating");
     if (file.size < 5000000) {
@@ -41,11 +27,6 @@ export default function PersonalInfoForm() {
     const { name, value } = e.target;
     setPersonalInfo((prev) => ({ ...prev, [name]: value }));
   };
-
-  // const handleAvatarChange = (e) => {
-  //   // console.log(URL.createObjectURL(e.target.files[0]));
-  //   setPersonalInfo((prev) => ({ ...prev, avatar: URL.createObjectURL(e.target.files[0]) }));
-  // };
 
   const toggleAccordionItem = () => {
     setPersonalInfo((prev) => ({ ...prev, expand: !prev.expand }));
@@ -123,7 +104,7 @@ export default function PersonalInfoForm() {
           </label>
           {/* <input type="file" accept="image/*" id="avatar" name="avatar" onChange={handleAvatarChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" /> */}
           <IKContext publicKey="public_D3R2YXCqESRUwCNMgLufGCsa8GY=" urlEndpoint="https://ik.imagekit.io/odinbook" authenticator={Authenticator}>
-            <IKUpload id="imageInput" onChange={handleThumbnailChange} onUploadStart={onUploadStart} onUploadProgress={onUploadProgress} name="imageInput" accept="image/*" validateFile={validateFileFunction} fileName="avatar.png" onSuccess={onSuccess} />
+            <IKUpload id="imageInput" name="imageInput" accept="image/*" validateFile={validateFileFunction} fileName="avatar.png" onSuccess={onSuccess} />
           </IKContext>
         </div>
       </div>

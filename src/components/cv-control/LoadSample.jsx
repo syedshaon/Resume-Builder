@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEdit, FaRobot, FaCloudDownloadAlt, FaMagic } from "react-icons/fa";
+import { FaRobot } from "react-icons/fa";
 import { useAuthContext } from "@/context/AuthContext";
 
 function LoadSample() {
