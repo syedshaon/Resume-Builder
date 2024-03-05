@@ -134,7 +134,13 @@ export function AuthContextProvider({ children }) {
   const [skills, setSkills] = useState({ skills: ["JavaScript", "ReactJS", "MERN", "SCSS", "TailWindCSS", "Redux"], visible: true, expand: false });
   const [otherInfo, setOtherInfo] = useState([
     { id: 1, title: "Languages", summary: ["English", "Bengali"], visible: true, expand: false },
-    { id: 2, title: "Hobbies", summary: ["Biking", "Watching Movies"], visible: true, expand: false },
+    {
+      id: 2,
+      break: true,
+      visible: true,
+      expand: false,
+    },
+    { id: 3, title: "Hobbies", summary: ["Biking", "Watching Movies"], visible: true, expand: false },
   ]);
 
   useEffect(() => {

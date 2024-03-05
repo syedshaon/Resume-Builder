@@ -7,14 +7,18 @@ export default function ShowOthers() {
 
   return (
     otherInfo.some((item) => item.visible) &&
-    otherInfo.map((other, index) => (
-      <div className={`${!other.visible && "hidden"} others-entry`} key={index}>
-        <h3 className="title">{other.title}</h3>
-        <ul className="summary">
-          {/* Summary separated with semicolons are converted to a list */}
-          {other.summary.map((element, i) => element && <li key={i}>{element}</li>)}
-        </ul>
-      </div>
-    ))
+    otherInfo.map((other, index) =>
+      !other.break ? (
+        <div className={`${!other.visible && "hidden"} others-entry`} key={index}>
+          <h3 className="title">{other.title}</h3>
+          <ul className="summary">
+            {/* Summary separated with semicolons are converted to a list */}
+            {other.summary.map((element, i) => element && <li key={i}>{element}</li>)}
+          </ul>
+        </div>
+      ) : (
+        <div key={`exp-${other.id}`} className={`h-[120px] ${!other.visible && "hidden"}`}></div>
+      )
+    )
   );
 }
