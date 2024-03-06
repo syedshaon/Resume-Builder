@@ -41,7 +41,7 @@ export default function HeaderAuth() {
     if (user) {
       authContent = (
         <div className="ml-auto flex justify-end items-center">
-          {user.image && <Image width={300} height={300} className="cursor-pointer" src={"session.data.user.image" || ""} />}
+          {user.image && <Image alt="user image" width={300} height={300} className="cursor-pointer" src={"session.data.user.image" || ""} />}
 
           <div>
             <form action={actions.handleSignOut} class="group relative ">

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaEdit } from "react-icons/fa";
 import Image from "next/image";
 
-function page() {
+function Page() {
   const [dfltBangla, setDfltBangla] = useState(false);
   const setBangla = (e) => {
     setDfltBangla(e.target.checked);
@@ -39,20 +39,20 @@ function page() {
       </div>
       {/* EngLish Instructions starts */}
 
-      <div className={`${!dfltBangla ? "block" : "hidden"} px-4  py-8 container   max-w-[900px] mx-auto my-28 `}>
+      <div className={`${!dfltBangla ? "block" : "hidden"} px-4 py-8 container max-w-[900px] mx-auto my-28`}>
         <h1 className="text-3xl font-bold mb-4">How to create the Resume?</h1>
 
         <p>
-          <em className="font-bold">TLDR:</em> Just check all the options available and you will get it. Don't worry, your progress is getting saved.
+          <em className="font-bold">TLDR:</em> Just check all the options available and you will get it. Dont worry, your progress is getting saved.
         </p>
-        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={555} alt="Button Introduction" src="/different-buttons.png" />
+        <Image priority className="my-20 max-w-[80%] mx-auto" width={900} height={555} alt="Button Introduction" src="/different-buttons.png" />
 
         <h2 className="text-2xl font-bold mt-6 mb-2">How to add content?</h2>
 
         <ul className="list-disc ml-6 mb-4">
           <li>From Personal Information area you can add personal information that you wish to show. If you left some field blank then that will not show up.</li>
           <li>There is an option to add an image. If you add that then the image will get saved in my firestore account.</li>
-          <li>Other information will get saved in your browser if you don't sign in.</li>
+          <li>Other information will get saved in your browser if you dont sign in.</li>
           <li>If you sign in then the information will get saved in my firestore account. And once you sign in again you will have an option(Pop Up) to restore previous data.</li>
         </ul>
 
@@ -66,7 +66,7 @@ function page() {
           </li>
           <li>Generally, you need space at the end/beginning of a page.</li>
           <li>
-            Once you add an entry if you don't want that to appear on your resume, then you can hide it by toggling <em className="font-bold">Show on resume</em> option.
+            Once you add an entry if you dont want that to appear on your resume, then you can hide it by toggling <em className="font-bold">Show on resume</em> option.
           </li>
         </ul>
         <Image className="my-20 max-w-[80%] mx-auto" width={900} height={415} alt="Button Introduction" src="/gap.png" />
@@ -75,13 +75,17 @@ function page() {
 
         <ul className="list-disc ml-6 mb-4">
           <li>
-            By clicking on the <em className="font-bold">Download</em> button, you can print your resume with some printer or can download as .PDF with your browser's <em className="font-bold">"Print to PDF"</em> function.
+            By clicking on the <em className="font-bold">Download</em> button, you can print your resume with some printer or can download as .PDF with your browsers <em className="font-bold">Print to PDF</em> function.
           </li>
-          <li>If you are on a PC/Mac and want to download as .PDF then make sure to set no margin from the "Save as PDF" dialogue box.</li>
-          <li>"Save as PDF" works best on Chrome browser on Desktop and mobile devices.</li>
+          <li>
+            If you are on a PC/Mac and want to download as .PDF then make sure to set no margin from the <em className="font-bold">Save as PDF</em> dialogue box.
+          </li>
+          <li>
+            <em className="font-bold">Save as PDF</em> works best on Chrome browser on Desktop and mobile devices.
+          </li>
           <li>It works on other browsers and devices also, but you may need to improvise.</li>
           <li>
-            If you have some background color other than white and your device doesn't allow setting <em className="font-bold">No Margin</em> when you download as .PDF then, you have 2 options.
+            If you have some background color other than white and your device doesnt allow setting <em className="font-bold">No Margin</em> when you download as .PDF then, you have 2 options.
             <ul className="list-disc ml-6">
               <li>
                 1. Use a different device that allows setting the border to <em className="font-bold">Zero</em>.
@@ -99,7 +103,9 @@ function page() {
 
         <ul className="list-disc ml-6 mb-4">
           <li>If you Sign In, you can sync the progress you made on creating your resume on a different device/location. If you can Sign In on that device with the same Gmail id.</li>
-          <li>If you don't want to OR can't sign in, then still your text data is saved on your browser's storage "local storage".</li>
+          <li>
+            If you dont want to OR cant sign in, then still your text data is saved on your browsers storage <em className="font-bold">local storage</em>.
+          </li>
         </ul>
 
         <h2 className="text-2xl font-bold mt-6 mb-2">Caution</h2>
@@ -107,7 +113,7 @@ function page() {
         <ul className="list-disc ml-6">
           <li>If you sign in then your information will get saved in my firestore account.</li>
           <li>
-            If you are worried about your information's privacy then I suggest you don't sign in. Still, your data will get saved <em className="font-bold">ONLY on your browser</em> and no one will get access to that.
+            If you are worried about your information privacy then I suggest you dont sign in. Still, your data will get saved <em className="font-bold">ONLY on your browser</em> and no one will get access to that.
           </li>
         </ul>
       </div>
@@ -115,7 +121,7 @@ function page() {
       {/* EngLish Instructions ends */}
 
       {/* Bengali Starts */}
-      <div className={` ${dfltBangla ? "block" : "hidden"} px-4  py-8 container   max-w-[900px] mx-auto my-28  `}>
+      <div className={` ${dfltBangla ? "block" : "hidden"} px-4  py-8 container   max-w-[900px] mx-auto my-28 `}>
         <h1 className="text-3xl font-bold mb-4">কীভাবে জীবনবৃত্তান্ত(Resume/CV) তৈরি করবেন?</h1>
 
         <p>
@@ -151,13 +157,13 @@ function page() {
 
         <ul className="list-disc ml-6 mb-4">
           <li>
-            <em className="font-bold">ডাউনলোড (Download)</em> বাটনে ক্লিক করে, আপনি প্রিন্টার দিয়ে আপনার জীবনবৃত্তান্ত প্রিন্ট করতে পারেন অথবা আপনার ব্রাউজারের <em className="font-bold">"Print to PDF"</em> ফাংশন ব্যাবহার করে .PDF (পি ডি এফ) আকারে সেভ করতে পারেন।
+            <em className="font-bold">ডাউনলোড (Download)</em> বাটনে ক্লিক করে, আপনি প্রিন্টার দিয়ে আপনার জীবনবৃত্তান্ত প্রিন্ট করতে পারেন অথবা আপনার ব্রাউজারের <em className="font-bold">Print to PDF</em> ফাংশন ব্যাবহার করে .PDF (পি ডি এফ) আকারে সেভ করতে পারেন।
           </li>
           <li>
-            আপনি যদি PC/Mac এ থাকেন এবং .PDF হিসাবে ডাউনলোড করতে চান তাহলে নিশ্চিত করুন যে <em className="font-bold">"Save as PDF"</em> ডায়ালগ বক্স থেকে কোনো মার্জিন সেট করা নেই।
+            আপনি যদি PC/Mac এ থাকেন এবং .PDF হিসাবে ডাউনলোড করতে চান তাহলে নিশ্চিত করুন যে <em className="font-bold">Save as PDF</em> ডায়ালগ বক্স থেকে কোনো মার্জিন সেট করা নেই।
           </li>
           <li>
-            <em className="font-bold">"Save as PDF"</em> ডেস্কটপ এবং মোবাইল ডিভাইসে Chrome / ক্রম ব্রাউজারে সবচেয়ে ভাল কাজ করে৷
+            <em className="font-bold">Save as PDF</em> ডেস্কটপ এবং মোবাইল ডিভাইসে Chrome / ক্রম ব্রাউজারে সবচেয়ে ভাল কাজ করে৷
           </li>
           <li>এটি অন্যান্য ব্রাউজার এবং ডিভাইসেও কাজ করে, তবে আপনাকে কিছু অপশন চেঞ্জ করতে হতে পারে।</li>
           <li>
@@ -179,7 +185,7 @@ function page() {
 
         <ul className="list-disc ml-6 mb-4">
           <li>যদি আপনি সাইন ইন করেন, আপনি একটি ভিন্ন ডিভাইস/অবস্থানে আপনার জীবনবৃত্তান্ত তৈরি করার অগ্রগতি Syncronize করতে পারেন। যদি কিনা সেই ডিভাইসে একই জিমেইল আইডি দিয়ে সাইন ইন করতে পারেন।</li>
-          <li>আপনি যদি সাইন ইন করতে না চান বা সাইন ইন করতে না পারেন, তাহলেও আপনার টেক্সট ডেটা আপনার ব্রাউজারের স্টোরেজ ("local storage") এ সংরক্ষিত থাকে।</li>
+          <li>আপনি যদি সাইন ইন করতে না চান বা সাইন ইন করতে না পারেন, তাহলেও আপনার টেক্সট ডেটা আপনার ব্রাউজারের স্টোরেজ (local storage) এ সংরক্ষিত থাকে।</li>
         </ul>
 
         <h2 className="text-2xl font-bold mt-6 mb-2">সতর্কতা</h2>
@@ -196,4 +202,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
