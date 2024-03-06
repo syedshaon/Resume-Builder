@@ -98,14 +98,21 @@ export default function PersonalInfoForm() {
 
         {/* ... (other form fields) ... */}
 
-        <div className="flex flex-col space-y-2">
-          <label htmlFor="imageInput" className="font-bold mt-2">
-            Avatar:
-          </label>
-          {/* <input type="file" accept="image/*" id="avatar" name="avatar" onChange={handleAvatarChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" /> */}
-          <IKContext publicKey="public_D3R2YXCqESRUwCNMgLufGCsa8GY=" urlEndpoint="https://ik.imagekit.io/odinbook" authenticator={Authenticator}>
-            <IKUpload id="imageInput" name="imageInput" accept="image/*" validateFile={validateFileFunction} fileName="avatar.png" onSuccess={onSuccess} />
-          </IKContext>
+        <div className="flex items-center ">
+          <div className="flex flex-col space-y-2">
+            <label htmlFor="imageInput" className="font-bold mt-2">
+              Avatar:
+            </label>
+            {/* <input type="file" accept="image/*" id="avatar" name="avatar" onChange={handleAvatarChange} className="bg-gray-300 p-2 border  focus:outline-none focus:ring-1 focus:ring-blue-500" /> */}
+            <IKContext publicKey="public_D3R2YXCqESRUwCNMgLufGCsa8GY=" urlEndpoint="https://ik.imagekit.io/odinbook" authenticator={Authenticator}>
+              <IKUpload id="imageInput" name="imageInput" accept="image/*" validateFile={validateFileFunction} fileName="avatar.png" onSuccess={onSuccess} />
+            </IKContext>
+          </div>
+
+          <div className="flex items-center mt-2 space-x-2">
+            <input type="checkbox" name="showAvatar" id="showAvatar" checked={personalInfo.showAvatar} onChange={() => setPersonalInfo((prev) => ({ ...prev, showAvatar: !prev.showAvatar }))} className="border  focus:outline-none     w-5 h-5   accent-slate-900  cursor-pointer  " />
+            <label htmlFor="showAvatar">Show on Resume</label>
+          </div>
         </div>
       </div>
     </div>

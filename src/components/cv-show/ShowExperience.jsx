@@ -16,7 +16,7 @@ export default function ShowExperience() {
                 </div>
                 <div className="year-loc">
                   <p className="year">
-                    {exp.startDate} - {exp.endDate}
+                    {exp.startDate} {exp.startDate && "-"} {exp.endDate}
                   </p>
                   <p className="location">{exp.location}</p>
                 </div>

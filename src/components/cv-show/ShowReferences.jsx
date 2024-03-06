@@ -5,11 +5,11 @@ export default function ShowReferences() {
 
   return (
     references.some((item) => item.visible) && (
-      <div className="eduEx references">
+      <div className="eduEx references ">
         <h2 className="title">References</h2>
-        <div className="eduEx-list-top">
+        <div className="eduEx-list-top  flex flex-wrap flex-auto">
           {references.map((refs) => (
-            <div className={`${!refs.visible && "hidden"} eduEx-list`} key={refs.id}>
+            <div className={`${!refs.visible && "hidden"} min-w-[260px] eduEx-list`} key={refs.id}>
               <div className="title-sub">
                 <h3 className="title">{refs.referer}</h3>
                 <em>{refs.title}</em>

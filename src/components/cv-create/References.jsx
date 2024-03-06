@@ -10,8 +10,13 @@ export default function ReferencesForm() {
     setReferences((prev) => prev.map((item) => (item.id === id ? { ...item, [field]: value } : item)));
   };
 
-  const handleCheckboxChange = (id) => {
-    setReferences((prev) => prev.map((item) => (item.id === id ? { ...item, expand: !item.expand } : item)));
+  const toggleAccordionItem = (id) => {
+    setReferences((prevItems) =>
+      prevItems.map((item) => ({
+        ...item,
+        expand: item.id === id ? !item.expand : false,
+      }))
+    );
   };
 
   const setvisible = (id, currentVisible) => {
@@ -22,7 +27,7 @@ export default function ReferencesForm() {
     setReferences((prev) => [
       ...prev.map((item) => ({ ...item, expand: false })),
       {
-        id: prev.length + 1,
+        id: prev.length + 2,
         referer: "New Referrer",
         title: "",
         phone: "",
@@ -39,7 +44,7 @@ export default function ReferencesForm() {
         {references.map((item) => (
           <div key={item.id} className="relative mb-1">
             <h6 className="mb-0">
-              <button onClick={() => handleCheckboxChange(item.id)} className="relative flex items-center w-full p-4 py-2 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-300 text-slate-700  group text-dark-500">
+              <button onClick={() => toggleAccordionItem(item.id)} className="relative flex items-center w-full p-4 py-2 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-300 text-slate-700  group text-dark-500">
                 <span>{item.referer}</span>
                 {item.expand && <FaChevronUp className="absolute right-0 pt-1 text-base transition-transform" />}
                 {!item.expand && <FaChevronDown className="absolute right-0 pt-1 text-base transition-transform" />}

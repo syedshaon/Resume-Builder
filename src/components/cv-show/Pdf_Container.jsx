@@ -55,6 +55,7 @@ function Pdf_Container() {
         <div className="cv-child eduEx-wrapper" style={{ backgroundColor: edxColor }}>
           <ShowExperience />
           <ShowEducatior />
+
           <ShowReferences />
         </div>
         <div className="cv-child others" style={{ backgroundColor: sColor }}>

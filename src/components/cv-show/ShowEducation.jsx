@@ -16,7 +16,7 @@ export default function ShowEducation() {
                 </div>
                 <div className="year-loc">
                   <p className="year">
-                    {edu.startDate} - {edu.endDate}
+                    {edu.startDate} {edu.startDate && "-"} {edu.endDate}
                   </p>
                   <p className="location">{edu.location}</p>
                 </div>

@@ -209,7 +209,7 @@ function LoadSample() {
     setIColor("#FECE00");
     document.documentElement.style.setProperty("--icon", "#FECE00");
   };
-  return <FaRobot title="Generate Sample" className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " onClick={loadData} />;
+  return <FaRobot className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " onClick={loadData} />;
 }
 
 export default LoadSample;
