@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { FaEdit } from "react-icons/fa";
+
 import Image from "next/image";
+import { FaEdit, FaRobot, FaCloudDownloadAlt, FaMagic, FaQuestion } from "react-icons/fa";
 
 function Page() {
   const [dfltBangla, setDfltBangla] = useState(false);
@@ -37,9 +38,90 @@ function Page() {
           </div>
         </div>
       </div>
+
+      {/* Intro of Icons */}
+      {/* component */}
+      <div className=" max-w-7xl mx-auto mt-32 flex gap-4  flex-wrap flex-auto   items-center justify-center  ">
+        {/* Card 1 */}
+        <div className="rounded-sm w-full md:max-w-[45%] md:w-1/2 mb-5 md:mb-0 grid grid-cols-12 grid-rows-3 md:grid-rows-2 border-gray-500   shadow p-3 gap-2 items-center hover:shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-105 transform" href="#">
+          {/* Icon */}
+          <div className="col-span-12 md:col-span-2 md:row-start-1  md:row-span-2   flex items-center justify-center">
+            <FaEdit className="text-2xl" />
+          </div>
+          {/* Title */}
+          <div className="col-span-12 md:col-start-3 md:col-span-10 md:row-start-1 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-gray-950 font-semibold">Edit Content</p>
+          </div>
+          {/* Description */}
+          <div className="col-span-12 md:col-start-3  md:col-span-10 md:row-start-2 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-sm text-gray-600 font-light">Clicking here, you can add/edit your resume contents. </p>
+          </div>
+        </div>
+        {/* Card 2 */}
+        <div className="rounded-sm w-full md:max-w-[45%] md:w-1/2 mb-5 md:mb-0 grid grid-cols-12 grid-rows-3 md:grid-rows-2 border-gray-500   shadow p-3 gap-2 items-center hover:shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-105 transform" href="#">
+          {/* Icon */}
+          <div className="col-span-12 md:col-span-2 md:row-start-1  md:row-span-2   flex items-center justify-center">
+            <FaMagic className="text-2xl" />
+          </div>
+          {/* Title */}
+          <div className="col-span-12 md:col-start-3 md:col-span-10 md:row-start-1 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-gray-950 font-semibold">Personalize</p>
+          </div>
+          {/* Description */}
+          <div className="col-span-12 md:col-start-3  md:col-span-10 md:row-start-2 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-sm text-gray-600 font-light">Clicking here, you can change color and layout of your resume. </p>
+          </div>
+        </div>
+        {/* Card 3 */}
+        <div className="rounded-sm w-full md:max-w-[45%] md:w-1/2 mb-5 md:mb-0 grid grid-cols-12 grid-rows-3 md:grid-rows-2 border-gray-500   shadow p-3 gap-2 items-center hover:shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-105 transform" href="#">
+          {/* Icon */}
+          <div className="col-span-12 md:col-span-2 md:row-start-1  md:row-span-2   flex items-center justify-center">
+            <FaRobot className="text-2xl" />
+          </div>
+          {/* Title */}
+          <div className="col-span-12 md:col-start-3 md:col-span-10 md:row-start-1 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-gray-950 font-semibold">Auto Generate</p>
+          </div>
+          {/* Description */}
+          <div className="col-span-12 md:col-start-3  md:col-span-10 md:row-start-2 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-sm text-gray-600 font-light">Clicking here, you will get a fully loaded resume, that you can edit. </p>
+          </div>
+        </div>
+        {/* Card 4 */}
+        <div className="rounded-sm w-full md:max-w-[45%] md:w-1/2 mb-5 md:mb-0 grid grid-cols-12 grid-rows-3 md:grid-rows-2 border-gray-500   shadow p-3 gap-2 items-center hover:shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-105 transform" href="#">
+          {/* Icon */}
+          <div className="col-span-12 md:col-span-2 md:row-start-1  md:row-span-2   flex items-center justify-center">
+            <FaCloudDownloadAlt className="text-2xl" />
+          </div>
+          {/* Title */}
+          <div className="col-span-12 md:col-start-3 md:col-span-10 md:row-start-1 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-gray-950 font-semibold">Download</p>
+          </div>
+          {/* Description */}
+          <div className="col-span-12 md:col-start-3  md:col-span-10 md:row-start-2 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-sm text-gray-600 font-light">Clicking here, you can download/print your resume. </p>
+          </div>
+        </div>
+        {/* Card 5 */}
+        <div className="rounded-sm w-full md:max-w-[45%] md:w-1/2 mb-5 md:mb-0 grid grid-cols-12 grid-rows-3 md:grid-rows-2 border-gray-500   shadow p-3 gap-2 items-center hover:shadow-lg transition delay-150 duration-300 ease-in-out hover:scale-105 transform" href="#">
+          {/* Icon */}
+          <div className="col-span-12 md:col-span-2 md:row-start-1  md:row-span-2   flex items-center justify-center">
+            <FaQuestion className="text-2xl" />
+          </div>
+          {/* Title */}
+          <div className="col-span-12 md:col-start-3 md:col-span-10 md:row-start-1 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-gray-950 font-semibold">How To?</p>
+          </div>
+          {/* Description */}
+          <div className="col-span-12 md:col-start-3  md:col-span-10 md:row-start-2 md:row-span-1 xl:-ml-5 text-center md:text-left">
+            <p className="text-sm text-gray-600 font-light">Clicking there, you came to this page. </p>
+          </div>
+        </div>
+      </div>
+
       {/* EngLish Instructions starts */}
 
-      <div className={`${!dfltBangla ? "block" : "hidden"} px-4 py-8 container max-w-[900px] mx-auto my-28`}>
+      <div className={`${!dfltBangla ? "block" : "hidden"} px-4 py-8 container max-w-[900px] mx-auto mt-10 mb-28`}>
         <h1 className="text-3xl font-bold mb-4">How to create the Resume?</h1>
 
         <p>
@@ -62,7 +144,11 @@ function Page() {
           <li>You can add as many Experiences, Education, References, Skills, Other information as you want.</li>
           <li>When you add Experiences, Education, and Other Information you have an option to add Gap/Space.</li>
           <li>
-            Click the <em className="font-bold">Download</em> button and decide where you need space.
+            Click the{" "}
+            <em className="font-bold">
+              Download <FaCloudDownloadAlt />
+            </em>
+            button and decide where you need space.
           </li>
           <li>Generally, you need space at the end/beginning of a page.</li>
           <li>
@@ -75,7 +161,11 @@ function Page() {
 
         <ul className="list-disc ml-6 mb-4">
           <li>
-            By clicking on the <em className="font-bold">Download</em> button, you can print your resume with some printer or can download as .PDF with your browsers <em className="font-bold">Print to PDF</em> function.
+            By clicking on the{" "}
+            <em className="font-bold">
+              Download <FaCloudDownloadAlt />
+            </em>
+            button, you can print your resume with some printer or can download as .PDF with your browsers <em className="font-bold">Print to PDF</em> function.
           </li>
           <li>
             If you are on a PC/Mac and want to download as .PDF then make sure to set no margin from the <em className="font-bold">Save as PDF</em> dialogue box.
@@ -121,7 +211,7 @@ function Page() {
       {/* EngLish Instructions ends */}
 
       {/* Bengali Starts */}
-      <div className={` ${dfltBangla ? "block" : "hidden"} px-4  py-8 container   max-w-[900px] mx-auto my-28 `}>
+      <div className={` ${dfltBangla ? "block" : "hidden"} px-4  py-8 container   max-w-[900px] mx-auto mt-10 mb-28 `}>
         <h1 className="text-3xl font-bold mb-4">কীভাবে জীবনবৃত্তান্ত(Resume/CV) তৈরি করবেন?</h1>
 
         <p>
@@ -144,7 +234,10 @@ function Page() {
           <li>আপনি যত খুশি অভিজ্ঞতা, শিক্ষা, রেফারেন্স, দক্ষতা, অন্যান্য তথ্য যোগ করতে পারেন।</li>
           <li>যখন আপনি অভিজ্ঞতা, শিক্ষা এবং অন্যান্য তথ্য যোগ করেন তখন আপনি ফাঁকা জায়গা (Gap) যোগ করার অপশন পাবেন।</li>
           <li>
-            <em className="font-bold">ডাউনলোড (Download)</em> বাটনে ক্লিক করুন এবং আপনার কোথায় ফাঁকা জায়গা (Gap) প্রয়োজন তা বুঝে নিন৷
+            <em className="font-bold">
+              ডাউনলোড (Download) <FaCloudDownloadAlt />
+            </em>
+            বাটনে ক্লিক করুন এবং আপনার কোথায় ফাঁকা জায়গা (Gap) প্রয়োজন তা বুঝে নিন৷
           </li>
           <li>সাধারণত, একটি পৃষ্ঠার শেষে/শুরুতে আপনার ফাঁকা জায়গা (Gap) প্রয়োজন।</li>
           <li>
@@ -157,7 +250,10 @@ function Page() {
 
         <ul className="list-disc ml-6 mb-4">
           <li>
-            <em className="font-bold">ডাউনলোড (Download)</em> বাটনে ক্লিক করে, আপনি প্রিন্টার দিয়ে আপনার জীবনবৃত্তান্ত প্রিন্ট করতে পারেন অথবা আপনার ব্রাউজারের <em className="font-bold">Print to PDF</em> ফাংশন ব্যাবহার করে .PDF (পি ডি এফ) আকারে সেভ করতে পারেন।
+            <em className="font-bold">
+              ডাউনলোড (Download) <FaCloudDownloadAlt />
+            </em>
+            বাটনে ক্লিক করে, আপনি প্রিন্টার দিয়ে আপনার জীবনবৃত্তান্ত প্রিন্ট করতে পারেন অথবা আপনার ব্রাউজারের <em className="font-bold">Print to PDF</em> ফাংশন ব্যাবহার করে .PDF (পি ডি এফ) আকারে সেভ করতে পারেন।
           </li>
           <li>
             আপনি যদি PC/Mac এ থাকেন এবং .PDF হিসাবে ডাউনলোড করতে চান তাহলে নিশ্চিত করুন যে <em className="font-bold">Save as PDF</em> ডায়ালগ বক্স থেকে কোনো মার্জিন সেট করা নেই।
