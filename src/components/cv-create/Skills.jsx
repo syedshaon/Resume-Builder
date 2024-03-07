@@ -19,7 +19,7 @@ export default function SkillsForm({ onSubmit }) {
 
   return (
     <div className="mb-4">
-      <h3 onClick={() => toggleAccordionItem()} className="cursor-pointer relative bg-gray-700 text-white  px-4 py-2">
+      <h3 onClick={() => toggleAccordionItem()} className="cursor-pointer relative bg-gray-700 text-white  px-4 py-2 flex">
         <span>Skills</span>
         {skills.expand && <FaChevronUp className="absolute right-3 pt-1 text-base transition-transform" />}
         {!skills.expand && <FaChevronDown className="absolute right-3 pt-1 text-base transition-transform" />}

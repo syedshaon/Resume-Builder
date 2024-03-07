@@ -138,7 +138,7 @@ function Page() {
           <li>If you sign in then the information will get saved in my firestore account. And once you sign in again you will have an option(Pop Up) to restore previous data.</li>
         </ul>
 
-        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={490} alt="Button Introduction" src="/add-image.png" />
+        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={490} alt="add image to cv resume" src="/add-image.png" />
 
         <ul className="list-disc ml-6 mb-4">
           <li>You can add as many Experiences, Education, References, Skills, Other information as you want.</li>
@@ -155,7 +155,17 @@ function Page() {
             Once you add an entry if you dont want that to appear on your resume, then you can hide it by toggling <em className="font-bold">Show on resume</em> option.
           </li>
         </ul>
-        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={415} alt="Button Introduction" src="/gap.png" />
+        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={415} alt="Add gap between parts of cv, resume" src="/gap.png" />
+
+        <h2 className="text-2xl font-bold mt-6 mb-2">How To Customize?</h2>
+        <ul className="list-disc ml-6 mb-4">
+          <li>
+            By clicking on the <FaMagic /> Personalize button you will get an option to customize your resume.
+          </li>
+          <li>You can change Text Color, Icon Color, Header Background Color, Content Background Color , and Sidebar Background Color.</li>
+          <li>Also, you can selct Layout that suits your needs.</li>
+        </ul>
+        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={569} alt="How to Personalize, customize your cv, resume" src="/personalize.png" />
 
         <h2 className="text-2xl font-bold mt-6 mb-2">How To Print or Download?</h2>
 
@@ -187,7 +197,7 @@ function Page() {
           </li>
         </ul>
 
-        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={460} alt="Button Introduction" src="/print.png" />
+        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={460} alt="print download cv resume" src="/print.png" />
 
         <h2 className="text-2xl font-bold mt-6 mb-2"> How and Why you Sign In?</h2>
 
@@ -228,7 +238,7 @@ function Page() {
           <li>আপনি যদি সাইন ইন করেন তাহলে তথ্য আমার ফায়ারস্টোর অ্যাকাউন্টে সংরক্ষিত হবে। এবং পরবর্তীতে আপনি আবার সাইন ইন করলে আপনার কাছে আগের ডেটা পুনরুদ্ধার করার অপশন(Pop Up) থাকবে৷</li>
         </ul>
 
-        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={490} alt="Button Introduction" src="/add-image.png" />
+        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={490} alt="add image to cv resume" src="/add-image.png" />
 
         <ul className="list-disc ml-6 mb-4">
           <li>আপনি যত খুশি অভিজ্ঞতা, শিক্ষা, রেফারেন্স, দক্ষতা, অন্যান্য তথ্য যোগ করতে পারেন।</li>
@@ -244,7 +254,16 @@ function Page() {
             একবার আপনি একটি এন্ট্রি যোগ করলে যদি আপনি এটি আপনার জীবনবৃত্তান্তে প্রদর্শিত না করতে চান, তাহলে আপনি <em className="font-bold">Show on resume</em> বাটনে ক্লিক করে এই এন্ট্রি হাইড(লোকাতে) পারেন।
           </li>
         </ul>
-        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={415} alt="Button Introduction" src="/gap.png" />
+        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={415} alt="Add gap between parts of cv, resume" src="/gap.png" />
+
+        <h2 className="text-2xl font-bold mt-6 mb-2">কিভাবে কাস্টমাইজ করবেন?</h2>
+        <ul className="list-disc ml-6 mb-4">
+          <li>
+            <FaMagic /> পার্সনালাইজ (Personalize) বাটনে ক্লিক করে আপনি কাস্টমাইজ করার বিভিন্ন অপশন পাবেন।
+          </li>
+          <li>আপনি সিভি/রেজিউমের বিভিন্ন অংশের কালার এবং লে-আউট এখান থেকে চেঞ্জ করতে পারেন।</li>
+        </ul>
+        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={569} alt="How to Personalize, customize your cv, resume" src="/personalize.png" />
 
         <h2 className="text-2xl font-bold mt-6 mb-2">কিভাবে প্রিন্ট বা ডাউনলোড করবেন?</h2>
 
@@ -275,7 +294,7 @@ function Page() {
           </li>
         </ul>
 
-        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={460} alt="Button Introduction" src="/print.png" />
+        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={460} alt="print download cv resume" src="/print.png" />
 
         <h2 className="text-2xl font-bold mt-6 mb-2"> আপনি কিভাবে এবং কেন সাইন ইন করবেন?</h2>
 
