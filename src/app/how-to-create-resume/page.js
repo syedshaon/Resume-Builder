@@ -294,6 +294,12 @@ function Page() {
         </ul>
       </div>
       {/* Bengali Ends */}
+      <footer className="w-full flex justify-center my-5">
+        Made with ❤️ by
+        <a href="https://github.com/syedshaon" target="_blank">
+          &nbsp; Mashi
+        </a>
+      </footer>
     </>
   );
 }
