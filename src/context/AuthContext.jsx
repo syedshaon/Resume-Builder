@@ -21,12 +21,12 @@ export function AuthContextProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   // Related to Resume color
-  const [hColor, setHColor] = useState("#5d8443");
-  const [edxColor, setEdxpColor] = useState("#779c5e");
-  const [cColor, setCColor] = useState("#779c5e");
-  const [sColor, setSColor] = useState("#6a8e52");
-  const [fColor, setFColor] = useState("#ffffff");
-  const [iColor, setIColor] = useState("#00ff88");
+  const [hColor, setHColor] = useState("#ffffff");
+  const [edxColor, setEdxpColor] = useState("#ffffff");
+  const [cColor, setCColor] = useState("#ffffff");
+  const [sColor, setSColor] = useState("#ffffff");
+  const [fColor, setFColor] = useState("#000000");
+  const [iColor, setIColor] = useState("#000000");
 
   const [personalInfo, setPersonalInfo] = useState({
     name: "John Cina",
