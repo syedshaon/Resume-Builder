@@ -2,6 +2,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import "@/components/scss/styles.scss";
 import { AuthContextProvider } from "@/context/AuthContext";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"], display: "swap" });
 
@@ -18,6 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <GoogleAnalytics />
       <body className={roboto.className}>
         <div>
           <AuthContextProvider>{children}</AuthContextProvider>

@@ -44,11 +44,11 @@ export default function HeaderAuth() {
           {user.image && <Image alt="user image" width={300} height={300} className="cursor-pointer" src={"session.data.user.image" || ""} />}
 
           <div>
-            <form action={actions.handleSignOut} class="group relative ">
+            <form action={actions.handleSignOut} className="group relative ">
               <button className="text-gray-700 hover:text-white hover:bg-gray-700 transition-all font-bold py-2 px-2 sm:px-6   border border-gray-700 flex items-center " type="submit">
                 Sign Out
               </button>
-              <span class=" w-[80px] absolute -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">Sign Out</span>
+              <span className=" w-[80px] absolute -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">Sign Out</span>
             </form>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function HeaderAuth() {
             <FcGoogle />
             Sign In
           </button>
-          <span class=" w-[180px] absolute -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">Sign In to track progress!</span>
+          <span className=" w-[180px] absolute -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">Sign In to track progress!</span>
         </div>
       );
     }
