@@ -1,3 +1,5 @@
+// next.config.mjs
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -12,9 +14,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-
-// const nextConfig = {
-//   images: {
-//     domains: ["ik.imagekit.io"],
-//   },
-// };

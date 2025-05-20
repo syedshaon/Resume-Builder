@@ -1,16 +1,5 @@
-"use client";
-
-import CreateCV from "@/components/cv-create/Create_CV";
-import Pdf_Container from "@/components/cv-show/Pdf_Container";
-
-function page() {
-  return (
-    <div className="cv-parent">
-      <CreateCV />
-
-      <Pdf_Container />
-    </div>
-  );
+// This page is only a fallback and should not actually be rendered
+// The middleware will redirect "/" to "/en" before this page gets rendered
+export default function Home() {
+  return null; // Empty component as middleware should handle the redirect
 }
-
-export default page;
