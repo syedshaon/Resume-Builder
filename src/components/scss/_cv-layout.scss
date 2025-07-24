@@ -4,7 +4,7 @@
 .cv-parent {
   width: 100%;
   // height: 100vh;
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px;
   display: grid;
@@ -192,7 +192,7 @@
     transform: scale(0.6) translateY(-700px) translateX(-250px);
   }
   .cv-parent {
-    grid-template-columns: minmax(450px, 500px) minmax(599px, 1100px);
+    grid-template-columns: minmax(450px, 500px) minmax(599px, 900px);
   }
 }
 @media screen and (min-width: 1300px) {

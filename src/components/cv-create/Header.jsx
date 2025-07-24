@@ -7,9 +7,6 @@ import { useAuthContext } from "@/context/AuthContext";
 
 export default function Header() {
   const { showEdit, setShowEdit } = useAuthContext();
-  const downloadPdf = () => {
-    window.print();
-  };
 
   const personalize = () => {
     setShowEdit(false);
@@ -45,11 +42,6 @@ export default function Header() {
         <div className="group relative ">
           <LoadSample />
           <span className="w-[140px] absolute -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">Generate Sample</span>
-        </div>
-
-        <div className="group relative ">
-          <FaCloudDownloadAlt className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " onClick={downloadPdf} />
-          <span className="absolute -top-10 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">Download</span>
         </div>
 
         <div className="group relative ">

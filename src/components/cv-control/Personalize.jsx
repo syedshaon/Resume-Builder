@@ -2,7 +2,7 @@ import { useAuthContext } from "@/context/AuthContext";
 import Image from "next/image";
 
 function Personalize() {
-  const { setPersonalInfo, setSkills, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iColor, setIColor, setEdxpColor, setLeftSkillVal, setLeftVal } = useAuthContext();
+  const { setPersonalInfo, setSkills, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iColor, setIColor, setEdxpColor, setLeftSkillVal, setLeftVal, setDesign } = useAuthContext();
   function handleIColor(e) {
     setIColor(e.target.value);
     document.documentElement.style.setProperty("--icon", e.target.value);
@@ -27,6 +27,7 @@ function Personalize() {
     setLeftSkillVal(false);
     // Remove AllLeft Class
     setLeftVal(false);
+    setDesign("Design1");
   }
   function handleLayoutTwo() {
     setPersonalInfo((prev) => ({ ...prev, showAvatar: false }));
@@ -40,6 +41,7 @@ function Personalize() {
     setLeftSkillVal(false);
     // Remove AllLeft Class
     setLeftVal(false);
+    setDesign("Design2");
   }
   function handleLayoutThree() {
     // enable sidepanel
@@ -54,6 +56,7 @@ function Personalize() {
 
     // Remove AllLeft Class
     setLeftVal(false);
+    setDesign("Design3");
   }
   function handleLayoutFour() {
     setPersonalInfo((prev) => ({ ...prev, showAvatar: true }));
@@ -65,6 +68,7 @@ function Personalize() {
 
     // Add AllLeft Class
     setLeftVal(true);
+    setDesign("Design4");
   }
   function handleLayoutFive() {
     // enable sidepanel
@@ -80,6 +84,7 @@ function Personalize() {
 
     // Remove AllLeft Class
     setLeftVal(false);
+    setDesign("Design5");
   }
   function handleLayoutSix() {
     setPersonalInfo((prev) => ({ ...prev, showAvatar: true }));
@@ -93,6 +98,7 @@ function Personalize() {
     setLeftSkillVal(true);
     // Remove AllLeft Class
     setLeftVal(false);
+    setDesign("Design6");
   }
 
   return (

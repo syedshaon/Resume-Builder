@@ -1,7 +1,12 @@
 "use client";
 import CreateCV from "@/components/cv-create/Create_CV";
-import Pdf_Container from "@/components/cv-show/Pdf_Container";
 import { useEffect } from "react";
+
+import dynamic from "next/dynamic";
+
+const PdfViewer = dynamic(() => import("@/components/PdfViewer"), {
+  ssr: false,
+});
 
 export default function LocaleHomePage() {
   useEffect(() => {
@@ -12,7 +17,10 @@ export default function LocaleHomePage() {
   return (
     <div className="cv-parent">
       <CreateCV />
-      <Pdf_Container />
+      {/* <Pdf_Container /> */}
+      <div style={{ height: "90vh", marginTop: "30px" }}>
+        <PdfViewer />
+      </div>
     </div>
   );
 }

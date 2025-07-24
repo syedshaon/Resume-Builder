@@ -2,8 +2,11 @@
 import I18nProviderClient from "@/context/I18nProviderWrapper";
 import { AuthContextProvider } from "@/context/AuthContext";
 
+// export async function generateStaticParams() {
+//   return [{ locale: "en" }, { locale: "bn" }];
+// }
 export async function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "bn" }];
+  return [{ locale: "en" }]; // pre-render only English
 }
 
 export default function LocaleLayout({ children, params }) {

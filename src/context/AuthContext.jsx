@@ -27,6 +27,8 @@ export function AuthContextProvider({ children }) {
   const [sColor, setSColor] = useState("#ffffff");
   const [fColor, setFColor] = useState("#000000");
   const [iColor, setIColor] = useState("#000000");
+  // Design Layout
+  const [design, setDesign] = useState("Design1");
 
   const [personalInfo, setPersonalInfo] = useState({
     name: "John Cina",
@@ -134,12 +136,12 @@ export function AuthContextProvider({ children }) {
   const [skills, setSkills] = useState({ skills: ["JavaScript", "ReactJS", "MERN", "SCSS", "TailWindCSS", "Redux"], visible: true, expand: false });
   const [otherInfo, setOtherInfo] = useState([
     { id: 1, title: "Languages", summary: ["English", "Bengali"], visible: true, expand: false },
-    {
-      id: 2,
-      break: true,
-      visible: true,
-      expand: false,
-    },
+    // {
+    //   id: 2,
+    //   break: true,
+    //   visible: true,
+    //   expand: false,
+    // },
     { id: 3, title: "Hobbies", summary: ["Biking", "Watching Movies"], visible: true, expand: false },
   ]);
 
@@ -162,5 +164,5 @@ export function AuthContextProvider({ children }) {
   }, []);
 
   // Provide the authentication context to child components
-  return <AuthContext.Provider value={{ user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iColor, setIColor, edxColor, setEdxpColor, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal }}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{ user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iColor, setIColor, edxColor, setEdxpColor, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal, design, setDesign }}>{children}</AuthContext.Provider>;
 }

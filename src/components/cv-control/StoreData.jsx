@@ -177,14 +177,14 @@ export default function StoreData() {
       }
     };
 
-    if (!loading) {
-      if (user) {
-        fetchData();
-      } else {
-        restoreUserDataFromLocalStorage();
-      }
-    }
-  }, [user, loading]);
+    // if (!loading) {
+    //   if (user) {
+    //     fetchData();
+    //   } else {
+    //     restoreUserDataFromLocalStorage();
+    //   }
+    // }
+  }, [user, loading, setPersonalInfo, setEducation, setExperience, setReferences, setSkills, setOtherInfo, setHColor, setCColor, setSColor, setFColor, setIColor, setEdxpColor, setShowEdit, setLeftSkillVal, setLeftVal]);
 
   useEffect(() => {
     if (user) {
