@@ -2,7 +2,7 @@
 // pdf-sections/ExperiencePDF.js
 import React from "react";
 import { Text, View, Image, StyleSheet } from "@react-pdf/renderer";
-
+import ListElement from "../others/ListElement";
 const styles = StyleSheet.create({
   container: {
     width: "100%",
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const EducationPDF = ({ education }) => {
+const EducationPDF = ({ education, iconElement }) => {
   // console.log("ExperiencePDF component rendered with education:", education);
   // if (!experience || !experience.visible) {
   //   return null;
@@ -90,10 +90,7 @@ const EducationPDF = ({ education }) => {
               </View>
               <View style={styles.description}>
                 {item.summary.map((item, index) => (
-                  <View style={styles.descriptionSingle} key={index}>
-                    <Image alt="circle" src="/circle-dot.png" style={{ width: 10, height: 10 }} />
-                    <Text style={{ paddingLeft: 5 }}>{item}</Text>
-                  </View>
+                  <ListElement iconElement={iconElement} index={index} key={index} item={item} />
                 ))}
               </View>
             </View>

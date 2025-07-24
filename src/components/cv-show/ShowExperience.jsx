@@ -21,10 +21,7 @@ export default function ShowExperience() {
                   <p className="location">{exp.location}</p>
                 </div>
               </div>
-              <ul className="summary">
-                {/* Summary separated with semicolor(;) are converted to a list(<li></li>) */}
-                {exp.summary.map((element, i) => element && <li key={i}>{element}</li>)}
-              </ul>
+              <ul className="summary">{exp.summary.map((element, i) => element && <li key={i}>{element}</li>)}</ul>
             </div>
           ) : (
             <div key={`exp-${exp.id}`} className={`h-[120px] ${!exp.visible && "hidden"}`}></div>

@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
 
 const PersonalPDF = ({ personalInfo, design }) => {
   const { name, title, intro, avatar, showAvatar, email, phone, website, address } = personalInfo || {};
-  console.log("personal Info:", personalInfo);
-  console.log("design:", design);
+  // console.log("personal Info:", personalInfo);
+  // console.log("design:", design);
 
-  if (design === "Design1") {
+  if (design === "Design1" || design === "Design3") {
     return (
       <View style={styles.container}>
         <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
@@ -91,7 +91,80 @@ const PersonalPDF = ({ personalInfo, design }) => {
     );
   }
 
-  if (design === "Design5") {
+  if (design === "Design4") {
+    return (
+      <View style={styles.container}>
+        <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+          <View style={{ width: "130px" }}>{showAvatar && avatar && <Image src={avatar} style={styles.avatar} alt="Avatar" />}</View>
+          <View style={{ marginRight: "auto" }}>
+            <Text style={styles.name}>{name}</Text>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.intro}>{intro}</Text>
+          </View>
+        </View>
+
+        <View style={styles.contact}>
+          {email && (
+            <View style={styles.contactItem}>
+              <Image alt="email" src="/mail.png" style={{ width: 10, height: 10 }} />
+              <Text>{email}</Text>
+            </View>
+          )}
+          {phone && (
+            <View style={styles.contactItem}>
+              <Image alt="phone" src="/phone.png" style={{ width: 10, height: 10 }} />
+              <Text>{phone}</Text>
+            </View>
+          )}
+
+          {address && (
+            <View style={styles.contactItem}>
+              <Image alt="address" src="/house.png" style={{ width: 10, height: 10 }} />
+              <Text>{address}</Text>
+            </View>
+          )}
+        </View>
+      </View>
+    );
+  }
+
+  if (design === "Design6") {
+    return (
+      <View style={styles.container}>
+        <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+          <View>
+            <Text style={styles.name}>{name}</Text>
+            <Text style={styles.title}>{title}</Text>
+            <Text style={styles.intro}>{intro}</Text>
+          </View>
+          <View>{showAvatar && avatar && <Image src={avatar} style={styles.avatar} alt="Avatar" />}</View>
+        </View>
+
+        <View style={styles.contact}>
+          {email && (
+            <View style={styles.contactItem}>
+              <Image alt="email" src="/mail.png" style={{ width: 10, height: 10 }} />
+              <Text>{email}</Text>
+            </View>
+          )}
+          {phone && (
+            <View style={styles.contactItem}>
+              <Image alt="phone" src="/phone.png" style={{ width: 10, height: 10 }} />
+              <Text>{phone}</Text>
+            </View>
+          )}
+
+          {address && (
+            <View style={styles.contactItem}>
+              <Image alt="address" src="/house.png" style={{ width: 10, height: 10 }} />
+              <Text>{address}</Text>
+            </View>
+          )}
+        </View>
+      </View>
+    );
+  }
+  if (design === "Design5" || design === "Design2") {
     return (
       <View style={styles.container}>
         <Text style={styles.name}>{name}</Text>

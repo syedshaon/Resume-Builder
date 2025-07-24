@@ -6,7 +6,6 @@ export default function ShowSkills() {
     <div className="others-entry" style={{ display: skills.visible ? "block" : "none" }}>
       <h3 className="title">Skills</h3>
       <ul className="summary">
-        {/* Summary separated with semicolor(;) are converted to a list(<li></li>) */}
         {skills.skills.map((element, i) => {
           return <li key={i}>{element}</li>;
         })}

@@ -2,6 +2,7 @@
 // pdf-sections/ExperiencePDF.js
 import React from "react";
 import { Text, View, Image, StyleSheet } from "@react-pdf/renderer";
+import ListElement from "../others/ListElement";
 
 const styles = StyleSheet.create({
   container: {
@@ -61,7 +62,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const ExperiencePDF = ({ experience }) => {
+const ExperiencePDF = ({ experience, iconElement }) => {
   console.log("Experience Data:", experience);
   return (
     <View style={styles.container}>
@@ -82,15 +83,7 @@ const ExperiencePDF = ({ experience }) => {
                   <Text>{item.location}</Text>
                 </View>
               </View>
-              <View style={styles.description}>
-                {Array.isArray(item.summary) &&
-                  item.summary.map((summaryItem, summaryIndex) => (
-                    <View style={styles.descriptionSingle} key={summaryIndex}>
-                      <Image alt="circle" src="/circle-dot.png" style={{ width: 10, height: 10 }} />
-                      <Text style={{ paddingLeft: 5 }}>{summaryItem}</Text>
-                    </View>
-                  ))}
-              </View>
+              <View style={styles.description}>{Array.isArray(item.summary) && item.summary.map((summaryItem, summaryIndex) => <ListElement index={summaryIndex} iconElement={iconElement} key={summaryIndex} item={summaryItem} />)}</View>
             </View>
           );
         }

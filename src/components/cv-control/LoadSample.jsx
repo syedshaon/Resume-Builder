@@ -3,7 +3,7 @@ import { FaRobot } from "react-icons/fa";
 import { useAuthContext } from "@/context/AuthContext";
 
 function LoadSample() {
-  const { setPersonalInfo, setEducation, setExperience, setReferences, setSkills, setOtherInfo, setHColor, setCColor, setSColor, setFColor, setIColor, setEdxpColor } = useAuthContext();
+  const { setPersonalInfo, setEducation, setExperience, setReferences, setSkills, setOtherInfo, setHColor, setCColor, setSColor, setFColor, setIconElement, setEdxpColor } = useAuthContext();
   const loadData = () => {
     setPersonalInfo({
       name: "John Cina",
@@ -163,17 +163,6 @@ function LoadSample() {
         visible: true,
         expand: false,
       },
-      {
-        id: 7,
-        company: "Wayne Corp",
-        jobTitle: "Junior Developer",
-        startDate: "March 2018",
-        endDate: "May 2019",
-        location: "San Francisco, USA",
-        summary: ["Collaborated with senior developers to build and maintain client websites using the latest web technologies."],
-        visible: true,
-        expand: false,
-      },
     ]);
 
     setReferences([
@@ -206,7 +195,7 @@ function LoadSample() {
     setSColor("#179EA1");
     setEdxpColor("#08AFAF");
     setFColor("#ffffff");
-    setIColor("#FECE00");
+    setIconElement("circle-check");
     document.documentElement.style.setProperty("--icon", "#FECE00");
   };
   return <FaRobot className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " onClick={loadData} />;

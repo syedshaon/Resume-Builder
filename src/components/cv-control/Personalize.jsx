@@ -1,12 +1,18 @@
 import { useAuthContext } from "@/context/AuthContext";
 import Image from "next/image";
 
+const iconOptions = [
+  { name: "check", src: "/check.png" },
+  { name: "chevrons-right", src: "/chevrons-right.png" },
+  { name: "circle-check", src: "/circle-check.png" },
+  { name: "shell", src: "/shell.png" },
+  { name: "square-check", src: "/square-check.png" },
+  { name: "circle-dot", src: "/circle-dot.png" },
+];
+
 function Personalize() {
-  const { setPersonalInfo, setSkills, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iColor, setIColor, setEdxpColor, setLeftSkillVal, setLeftVal, setDesign } = useAuthContext();
-  function handleIColor(e) {
-    setIColor(e.target.value);
-    document.documentElement.style.setProperty("--icon", e.target.value);
-  }
+  const { setPersonalInfo, setSkills, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iconElement, setIconElement, setEdxpColor, setLeftSkillVal, setLeftVal, setDesign } = useAuthContext();
+
   function setContentColor(e) {
     setCColor(e.target.value);
     setEdxpColor(e.target.value);
@@ -110,9 +116,26 @@ function Personalize() {
             <input id="fColor" type="color" value={fColor} onChange={(e) => setFColor(e.target.value)} name="fColor" />
             <label htmlFor="fColor">Text Color</label>
           </div>
-          <div className="color-picker icon">
-            <input id="iColor" type="color" value={iColor} onChange={handleIColor} name="iColor" />
-            <label htmlFor="iColor">Icon Color</label>
+          {/* <div className="color-picker icon">
+            <input id="iconElement" type="color" value={iconElement} onChange={handleIconElement} name="iconElement" />
+            <label htmlFor="iconElement">Icon Color</label>
+          </div> */}
+          <div className="">
+            <div className="icon-grid">
+              {iconOptions.map((icon) => (
+                <div
+                  key={icon.name}
+                  className={`icon-option ${iconElement === icon.name ? "selected" : ""}`}
+                  onClick={() => {
+                    setIconElement(icon.name);
+                    document.documentElement.style.setProperty("--icon", icon.name);
+                  }}
+                >
+                  <Image src={icon.src} alt={icon.name} width={15} height={15} />
+                </div>
+              ))}
+            </div>
+            <p style={{ fontWeight: "bold", fontSize: "16px", textAlign: "center" }}>Select List Icon</p>
           </div>
         </div>
         <div className="color">

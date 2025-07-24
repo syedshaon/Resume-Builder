@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, Image, StyleSheet } from "@react-pdf/renderer";
+import ListElement from "../others/ListElement";
 
 const styles = StyleSheet.create({
   title: {
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
   },
 });
 
-function OthersPDF({ otherInfo }) {
+function OthersPDF({ otherInfo, iconElement }) {
   return (
     otherInfo.some((item) => item.visible) &&
     otherInfo.map((other, index) =>
@@ -40,15 +41,7 @@ function OthersPDF({ otherInfo }) {
           <Text style={styles.title}>{other.title}</Text>
           <View>
             {/* Summary separated with semicolons are converted to a list */}
-            {other.summary.map(
-              (element, i) =>
-                element && (
-                  <View style={styles.descriptionSingle} key={i}>
-                    <Image alt="circle" src="/circle-dot.png" style={{ width: 10, height: 10 }} />
-                    <Text style={{ paddingLeft: 5 }}>{element}</Text>
-                  </View>
-                )
-            )}
+            {other.summary.map((element, i) => element && <ListElement iconElement={iconElement} key={i} index={i} item={element} />)}
           </View>
         </View>
       ) : (

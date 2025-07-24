@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, Image, StyleSheet } from "@react-pdf/renderer";
+import ListElement from "../others/ListElement";
 
 const styles = StyleSheet.create({
   title: {
@@ -26,16 +27,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-function SkillsPDF({ skills }) {
+function SkillsPDF({ skills, iconElement }) {
   return (
     <View>
       <Text style={styles.title}>Skills</Text>
       <View style={styles.list}>
         {skills.skills.map((element, index) => (
-          <View style={styles.descriptionSingle} key={index}>
-            <Image alt="circle" src="/circle-dot.png" style={{ width: 10, height: 10 }} />
-            <Text style={{ paddingLeft: 5 }}>{element}</Text>
-          </View>
+          <ListElement iconElement={iconElement} key={index} index={index} item={element} />
         ))}
       </View>
     </View>

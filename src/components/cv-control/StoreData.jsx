@@ -7,8 +7,8 @@ import { useAuthContext } from "@/context/AuthContext";
 
 export default function StoreData() {
   const [popupIsVisible, setPopupIsVisible] = useState(false);
-  const { user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iColor, setIColor, edxColor, setEdxpColor, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal } = useAuthContext();
-  const storeUser = async (newPersonalInfo, newEducation, newExperience, newReferences, newSkills, newOtherInfo, newHColor, newCColor, newSColor, newFColor, newIColor, newEdxColor, newShowEdit, newLeftSkillVal, newAllLeftVal) => {
+  const { user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iconElement, setIconElement, edxColor, setEdxpColor, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal } = useAuthContext();
+  const storeUser = async (newPersonalInfo, newEducation, newExperience, newReferences, newSkills, newOtherInfo, newHColor, newCColor, newSColor, newFColor, newIconElement, newEdxColor, newShowEdit, newLeftSkillVal, newAllLeftVal) => {
     // console.log(newPersonalInfo.name);
     setPopupIsVisible(true);
 
@@ -31,7 +31,7 @@ export default function StoreData() {
           cColor: newCColor,
           sColor: newSColor,
           fColor: newFColor,
-          iColor: newIColor,
+          iconElement: newIconElement,
           edxColor: newEdxColor,
           showEdit: newShowEdit,
           leftSkillVal: newLeftSkillVal,
@@ -54,7 +54,7 @@ export default function StoreData() {
           cColor: newCColor,
           sColor: newSColor,
           fColor: newFColor,
-          iColor: newIColor,
+          iconElement: newIconElement,
           edxColor: newEdxColor,
           showEdit: newShowEdit,
           leftSkillVal: newLeftSkillVal,
@@ -70,7 +70,7 @@ export default function StoreData() {
     }, 5000);
   };
 
-  const storeUserDataInLocalStorage = (newPersonalInfo, newEducation, newExperience, newReferences, newSkills, newOtherInfo, newHColor, newCColor, newSColor, newFColor, newIColor, newEdxColor, newShowEdit, newLeftSkillVal, newAllLeftVal) => {
+  const storeUserDataInLocalStorage = (newPersonalInfo, newEducation, newExperience, newReferences, newSkills, newOtherInfo, newHColor, newCColor, newSColor, newFColor, newIconElement, newEdxColor, newShowEdit, newLeftSkillVal, newAllLeftVal) => {
     // Save data to localStorage
     setPopupIsVisible(true);
     const userDataForLocalStorage = {
@@ -84,7 +84,7 @@ export default function StoreData() {
       cColor: newCColor,
       sColor: newSColor,
       fColor: newFColor,
-      iColor: newIColor,
+      iconElement: newIconElement,
       edxColor: newEdxColor,
       showEdit: newShowEdit,
       leftSkillVal: newLeftSkillVal,
@@ -137,7 +137,7 @@ export default function StoreData() {
           setCColor(userData.data.cColor);
           setSColor(userData.data.sColor);
           setFColor(userData.data.fColor);
-          setIColor(userData.data.iColor);
+          setIconElement(userData.data.iconElement);
           setEdxpColor(userData.data.edxColor);
           setShowEdit(userData.data.showEdit);
           setLeftSkillVal(userData.data.leftSkillVal);
@@ -165,7 +165,7 @@ export default function StoreData() {
           setCColor(userData.cColor);
           setSColor(userData.sColor);
           setFColor(userData.fColor);
-          setIColor(userData.iColor);
+          setIconElement(userData.iconElement);
           setEdxpColor(userData.edxColor);
           setShowEdit(userData.showEdit);
           setLeftSkillVal(userData.leftSkillVal);
@@ -184,25 +184,25 @@ export default function StoreData() {
     //     restoreUserDataFromLocalStorage();
     //   }
     // }
-  }, [user, loading, setPersonalInfo, setEducation, setExperience, setReferences, setSkills, setOtherInfo, setHColor, setCColor, setSColor, setFColor, setIColor, setEdxpColor, setShowEdit, setLeftSkillVal, setLeftVal]);
+  }, [user, loading, setPersonalInfo, setEducation, setExperience, setReferences, setSkills, setOtherInfo, setHColor, setCColor, setSColor, setFColor, setIconElement, setEdxpColor, setShowEdit, setLeftSkillVal, setLeftVal]);
 
   useEffect(() => {
     if (user) {
       const intervalId = setInterval(() => {
-        storeUser(personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iColor, edxColor, showEdit, leftSkillVal, allLeftVal); // Run storeUser after 30 seconds
+        storeUser(personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iconElement, edxColor, showEdit, leftSkillVal, allLeftVal); // Run storeUser after 30 seconds
       }, 30000);
 
       // Clean up the interval when the component unmounts
       return () => clearInterval(intervalId);
     } else {
       const intervalId = setInterval(() => {
-        storeUserDataInLocalStorage(personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iColor, edxColor, showEdit, leftSkillVal, allLeftVal); // Run storeUser after 30 seconds
+        storeUserDataInLocalStorage(personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iconElement, edxColor, showEdit, leftSkillVal, allLeftVal); // Run storeUser after 30 seconds
       }, 30000);
 
       // Clean up the interval when the component unmounts
       return () => clearInterval(intervalId);
     }
-  }, [user, loading, personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iColor, edxColor, showEdit, leftSkillVal, allLeftVal]);
+  }, [user, loading, personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iconElement, edxColor, showEdit, leftSkillVal, allLeftVal]);
 
   return (
     <>

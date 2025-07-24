@@ -22,10 +22,7 @@ export default function ShowEducation() {
                 </div>
               </div>
               {edu.result && <em className="result">Result: {edu.result}</em>}
-              <ul className="summary">
-                {/* Summary separated with semicolor(;) are converted to a list(<li></li>) */}
-                {edu.summary.map((element, i) => element && <li key={i}>{element}</li>)}
-              </ul>
+              <ul className="summary">{edu.summary.map((element, i) => element && <li key={i}>{element}</li>)}</ul>
             </div>
           ) : (
             <div key={`edu-${edu.id}`} className={`h-[120px] ${!edu.visible && "hidden"}`}></div>
