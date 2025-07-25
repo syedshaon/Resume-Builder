@@ -1,6 +1,5 @@
 import { useAuthContext } from "@/context/AuthContext";
 import { FaChevronDown, FaChevronUp, FaTrash } from "react-icons/fa";
-import { CgSpaceBetweenV } from "react-icons/cg";
 
 export default function OtherInfoForm() {
   const { otherInfo, setOtherInfo } = useAuthContext();
@@ -58,6 +57,10 @@ export default function OtherInfoForm() {
     setOtherInfo((prev) => prev.filter((item) => !(item.id === id && item.break)));
   };
 
+  const removeThisInfo = (id) => {
+    setOtherInfo((prev) => prev.filter((item) => item.id !== id));
+  };
+
   return (
     <div className="flex flex-col ">
       <div className="  mb-2">
@@ -65,13 +68,24 @@ export default function OtherInfoForm() {
         {otherInfo.map((item) =>
           !item.break ? (
             <div key={item.id} className="relative mb-1">
-              <h6 className="mb-0">
-                <button onClick={() => toggleAccordionItem(item.id)} className="relative flex items-center w-full p-4 py-2 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-300 text-slate-700  group text-dark-500">
-                  <span>{item.title}</span>
-                  {item.expand && <FaChevronUp className="absolute right-0 pt-1 text-base transition-transform" />}
-                  {!item.expand && <FaChevronDown className="absolute right-0 pt-1 text-base transition-transform" />}
-                </button>
-              </h6>
+              <div className="mb-0 relative flex items-center justify-between w-full p-4 py-2 font-semibold text-left transition-all ease-in border-b border-solid cursor-pointer border-slate-300 text-slate-700 group text-dark-500">
+                {/* Left side: Label */}
+                <span>{item.title}</span>
+
+                {/* Right side: Actions */}
+                <div className="flex items-center space-x-2">
+                  {/* Remove info button */}
+                  <button onClick={() => removeThisInfo(item.id)} className="flex items-center text-red-500 hover:text-red-700 transition-colors" aria-label="Remove info">
+                    <span className="sr-only">Remove Info</span>
+                    <FaTrash className="text-black  " />
+                  </button>
+
+                  {/* Toggle accordion button */}
+                  <button onClick={() => toggleAccordionItem(item.id)} className="flex items-center text-slate-600 hover:text-slate-800 transition-colors" aria-label="Toggle accordion">
+                    {item.expand ? <FaChevronUp className="text-base transition-transform" /> : <FaChevronDown className="text-base transition-transform" />}
+                  </button>
+                </div>
+              </div>
 
               <div className={`${item.expand && "expanded py-4"} expandle px-2   text-sm leading-normal text-blue-gray-500/80 border shadow`}>
                 <div className="flex flex-col space-y-2">
