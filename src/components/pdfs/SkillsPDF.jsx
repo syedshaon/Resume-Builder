@@ -28,6 +28,10 @@ const styles = StyleSheet.create({
   },
 });
 function SkillsPDF({ skills, iconElement }) {
+  if (skills.skills.length === 0 || !skills.visible) {
+    return null;
+  }
+
   return (
     <View>
       <Text style={styles.title}>Skills</Text>

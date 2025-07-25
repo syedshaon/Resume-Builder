@@ -71,7 +71,7 @@ const EducationPDF = ({ education, iconElement }) => {
     <View style={styles.container}>
       <Text style={styles.title}>{education.title || "Education"}</Text>
       {education.map((item, index) => {
-        if (item.school) {
+        if (item.school && item.visible) {
           return (
             <View key={index} style={styles.item}>
               <View style={styles.intro}>

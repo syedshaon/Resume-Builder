@@ -39,21 +39,23 @@ const styles = StyleSheet.create({
 });
 
 const ReferencesPDF = ({ references }) => {
-  // console.log("ReferencesPDF component rendered with referrence:", references);
-  // if (!experience || !experience.visible) {
-  //   return null;
-  // }
+  console.log("ReferencesPDF component rendered with referrence:", references);
+  // if references.map => item visible is false, then return null
+
+  if (references.length === 0 || !references.some((item) => item.visible)) {
+    return null;
+  }
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>{"References"}</Text>
       <View style={styles.item}>
         {references.map((item, index) =>
-          item.referer ? (
+          item.visible ? (
             <View key={index} style={styles.intro}>
-              <Text style={styles.referer}>{item.referer}</Text>
-              <Text style={styles.refererTitle}>{item.title}</Text>
-              <Text style={styles.phone}>{item.phone}</Text>
+              {item.referer && <Text style={styles.referer}>{item.referer}</Text>}
+              {item.title && <Text style={styles.refererTitle}>{item.title}</Text>}
+              {item.phone && <Text style={styles.phone}>{item.phone}</Text>}
             </View>
           ) : null
         )}

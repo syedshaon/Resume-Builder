@@ -7,8 +7,8 @@ import { useAuthContext } from "@/context/AuthContext";
 
 export default function StoreData() {
   const [popupIsVisible, setPopupIsVisible] = useState(false);
-  const { user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iconElement, setIconElement, edxColor, setEdxpColor, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal } = useAuthContext();
-  const storeUser = async (newPersonalInfo, newEducation, newExperience, newReferences, newSkills, newOtherInfo, newHColor, newCColor, newSColor, newFColor, newIconElement, newEdxColor, newShowEdit, newLeftSkillVal, newAllLeftVal) => {
+  const { user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, iconElement, setIconElement, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal } = useAuthContext();
+  const storeUser = async (newPersonalInfo, newEducation, newExperience, newReferences, newSkills, newOtherInfo, newIconElement, newShowEdit, newLeftSkillVal, newAllLeftVal) => {
     // console.log(newPersonalInfo.name);
     setPopupIsVisible(true);
 
@@ -27,12 +27,9 @@ export default function StoreData() {
           references: newReferences,
           skills: newSkills,
           otherInfo: newOtherInfo,
-          hColor: newHColor,
-          cColor: newCColor,
-          sColor: newSColor,
-          fColor: newFColor,
+
           iconElement: newIconElement,
-          edxColor: newEdxColor,
+
           showEdit: newShowEdit,
           leftSkillVal: newLeftSkillVal,
           allLeftVal: newAllLeftVal,
@@ -50,12 +47,9 @@ export default function StoreData() {
           references: newReferences,
           skills: newSkills,
           otherInfo: newOtherInfo,
-          hColor: newHColor,
-          cColor: newCColor,
-          sColor: newSColor,
-          fColor: newFColor,
+
           iconElement: newIconElement,
-          edxColor: newEdxColor,
+
           showEdit: newShowEdit,
           leftSkillVal: newLeftSkillVal,
           allLeftVal: newAllLeftVal,
@@ -70,7 +64,7 @@ export default function StoreData() {
     }, 5000);
   };
 
-  const storeUserDataInLocalStorage = (newPersonalInfo, newEducation, newExperience, newReferences, newSkills, newOtherInfo, newHColor, newCColor, newSColor, newFColor, newIconElement, newEdxColor, newShowEdit, newLeftSkillVal, newAllLeftVal) => {
+  const storeUserDataInLocalStorage = (newPersonalInfo, newEducation, newExperience, newReferences, newSkills, newOtherInfo, newIconElement, newShowEdit, newLeftSkillVal, newAllLeftVal) => {
     // Save data to localStorage
     setPopupIsVisible(true);
     const userDataForLocalStorage = {
@@ -80,12 +74,9 @@ export default function StoreData() {
       references: newReferences,
       skills: newSkills,
       otherInfo: newOtherInfo,
-      hColor: newHColor,
-      cColor: newCColor,
-      sColor: newSColor,
-      fColor: newFColor,
+
       iconElement: newIconElement,
-      edxColor: newEdxColor,
+
       showEdit: newShowEdit,
       leftSkillVal: newLeftSkillVal,
       allLeftVal: newAllLeftVal,
@@ -133,12 +124,9 @@ export default function StoreData() {
           setReferences(userData.data.references);
           setSkills(userData.data.skills);
           setOtherInfo(userData.data.otherInfo);
-          setHColor(userData.data.hColor);
-          setCColor(userData.data.cColor);
-          setSColor(userData.data.sColor);
-          setFColor(userData.data.fColor);
+
           setIconElement(userData.data.iconElement);
-          setEdxpColor(userData.data.edxColor);
+
           setShowEdit(userData.data.showEdit);
           setLeftSkillVal(userData.data.leftSkillVal);
           setLeftVal(userData.data.allLeftVal);
@@ -161,12 +149,9 @@ export default function StoreData() {
           setReferences(userData.references);
           setSkills(userData.skills);
           setOtherInfo(userData.otherInfo);
-          setHColor(userData.hColor);
-          setCColor(userData.cColor);
-          setSColor(userData.sColor);
-          setFColor(userData.fColor);
+
           setIconElement(userData.iconElement);
-          setEdxpColor(userData.edxColor);
+
           setShowEdit(userData.showEdit);
           setLeftSkillVal(userData.leftSkillVal);
           setLeftVal(userData.allLeftVal);
@@ -184,25 +169,25 @@ export default function StoreData() {
     //     restoreUserDataFromLocalStorage();
     //   }
     // }
-  }, [user, loading, setPersonalInfo, setEducation, setExperience, setReferences, setSkills, setOtherInfo, setHColor, setCColor, setSColor, setFColor, setIconElement, setEdxpColor, setShowEdit, setLeftSkillVal, setLeftVal]);
+  }, [user, loading, setPersonalInfo, setEducation, setExperience, setReferences, setSkills, setOtherInfo, setIconElement, setShowEdit, setLeftSkillVal, setLeftVal]);
 
   useEffect(() => {
     if (user) {
       const intervalId = setInterval(() => {
-        storeUser(personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iconElement, edxColor, showEdit, leftSkillVal, allLeftVal); // Run storeUser after 30 seconds
+        storeUser(personalInfo, education, experience, references, skills, otherInfo, iconElement, showEdit, leftSkillVal, allLeftVal); // Run storeUser after 30 seconds
       }, 30000);
 
       // Clean up the interval when the component unmounts
       return () => clearInterval(intervalId);
     } else {
       const intervalId = setInterval(() => {
-        storeUserDataInLocalStorage(personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iconElement, edxColor, showEdit, leftSkillVal, allLeftVal); // Run storeUser after 30 seconds
+        storeUserDataInLocalStorage(personalInfo, education, experience, references, skills, otherInfo, iconElement, showEdit, leftSkillVal, allLeftVal); // Run storeUser after 30 seconds
       }, 30000);
 
       // Clean up the interval when the component unmounts
       return () => clearInterval(intervalId);
     }
-  }, [user, loading, personalInfo, education, experience, references, skills, otherInfo, hColor, cColor, sColor, fColor, iconElement, edxColor, showEdit, leftSkillVal, allLeftVal]);
+  }, [user, loading, personalInfo, education, experience, references, skills, otherInfo, iconElement, showEdit, leftSkillVal, allLeftVal]);
 
   return (
     <>

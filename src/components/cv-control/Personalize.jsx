@@ -11,13 +11,7 @@ const iconOptions = [
 ];
 
 function Personalize() {
-  const { setPersonalInfo, setSkills, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iconElement, setIconElement, setEdxpColor, setLeftSkillVal, setLeftVal, setDesign } = useAuthContext();
-
-  function setContentColor(e) {
-    setCColor(e.target.value);
-    setEdxpColor(e.target.value);
-    document.documentElement.style.setProperty("--bodyC", e.target.value);
-  }
+  const { setPersonalInfo, setSkills, setOtherInfo, iconElement, setIconElement, setLeftSkillVal, setLeftVal, setDesign } = useAuthContext();
 
   function handleLayoutOne() {
     // enable image
@@ -110,12 +104,8 @@ function Personalize() {
   return (
     <>
       <div className="color-area">
-        <h3 className="design-title">Select a Layout</h3>
+        <h3 className="design-title">Select List Icon</h3>
         <div className="color">
-          <div className="color-picker font">
-            <input id="fColor" type="color" value={fColor} onChange={(e) => setFColor(e.target.value)} name="fColor" />
-            <label htmlFor="fColor">Text Color</label>
-          </div>
           {/* <div className="color-picker icon">
             <input id="iconElement" type="color" value={iconElement} onChange={handleIconElement} name="iconElement" />
             <label htmlFor="iconElement">Icon Color</label>
@@ -135,21 +125,6 @@ function Personalize() {
                 </div>
               ))}
             </div>
-            <p style={{ fontWeight: "bold", fontSize: "16px", textAlign: "center" }}>Select List Icon</p>
-          </div>
-        </div>
-        <div className="color">
-          <div className="color-picker header">
-            <input id="hColor" type="color" value={hColor} onChange={(e) => setHColor(e.target.value)} name="hColor" />
-            <label htmlFor="hColor">Header Background</label>
-          </div>
-          <div className="color-picker content">
-            <input id="cColor" type="color" value={cColor} onChange={setContentColor} name="cColor" />
-            <label htmlFor="cColor">Content Background</label>
-          </div>
-          <div className="color-picker sidebar">
-            <input id="sColor" type="color" value={sColor} onChange={(e) => setSColor(e.target.value)} name="sColor" />
-            <label htmlFor="sColor">Sidebar Background</label>
           </div>
         </div>
       </div>

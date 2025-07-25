@@ -68,7 +68,7 @@ const ExperiencePDF = ({ experience, iconElement }) => {
     <View style={styles.container}>
       <Text style={styles.title}>{experience.title || "Experience"}</Text>
       {experience.map((item, index) => {
-        if (item.company) {
+        if (item.company && item.visible) {
           return (
             <View key={index} style={styles.item}>
               <View style={styles.intro}>

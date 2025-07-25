@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const CVDocument = ({ personalInfo, skills, otherInfo, education, experience, references, sColor, fColor, edxColor, leftSkillVal, allLeftVal, design, iconElement }) => {
+const CVDocument = ({ personalInfo, skills, otherInfo, education, experience, references, leftSkillVal, allLeftVal, design, iconElement }) => {
   const hasSkills = skills.visible || otherInfo.some((item) => item.visible);
   // const design = personalInfo.design || "Design5"; // Default to Design5 if not specified
 

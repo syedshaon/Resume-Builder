@@ -3,7 +3,7 @@ import { FaRobot } from "react-icons/fa";
 import { useAuthContext } from "@/context/AuthContext";
 
 function LoadSample() {
-  const { setPersonalInfo, setEducation, setExperience, setReferences, setSkills, setOtherInfo, setHColor, setCColor, setSColor, setFColor, setIconElement, setEdxpColor } = useAuthContext();
+  const { setPersonalInfo, setEducation, setExperience, setReferences, setSkills, setOtherInfo, setIconElement } = useAuthContext();
   const loadData = () => {
     setPersonalInfo({
       name: "John Cina",
@@ -190,11 +190,6 @@ function LoadSample() {
       { id: 2, title: "Hobbies", summary: ["Biking", "Watching Movies"], visible: true, expand: false },
     ]);
 
-    setHColor("#179EA1");
-    setCColor("#179EA1");
-    setSColor("#179EA1");
-    setEdxpColor("#08AFAF");
-    setFColor("#ffffff");
     setIconElement("circle-check");
     document.documentElement.style.setProperty("--icon", "#FECE00");
   };

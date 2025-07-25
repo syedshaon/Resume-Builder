@@ -36,7 +36,7 @@ function OthersPDF({ otherInfo, iconElement }) {
   return (
     otherInfo.some((item) => item.visible) &&
     otherInfo.map((other, index) =>
-      !other.break ? (
+      !other.break && other.visible ? (
         <View style={{ marginTop: "20px", display: other.visible ? "block" : "none" }} key={index}>
           <Text style={styles.title}>{other.title}</Text>
           <View>

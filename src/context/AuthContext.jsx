@@ -20,14 +20,6 @@ export function AuthContextProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Related to Resume color
-  // Header Color
-  const [hColor, setHColor] = useState("#ffffff");
-  const [edxColor, setEdxpColor] = useState("#ffffff");
-  const [cColor, setCColor] = useState("#ffffff");
-  const [sColor, setSColor] = useState("#ffffff");
-  const [fColor, setFColor] = useState("#000000");
-  // const [iColor, setIColor] = useState("#000000");
   const [iconElement, setIconElement] = useState("circle-dot");
   // Design Layout
   const [design, setDesign] = useState("Design1");
@@ -166,5 +158,5 @@ export function AuthContextProvider({ children }) {
   }, []);
 
   // Provide the authentication context to child components
-  return <AuthContext.Provider value={{ user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, hColor, setHColor, cColor, setCColor, sColor, setSColor, fColor, setFColor, iconElement, setIconElement, edxColor, setEdxpColor, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal, design, setDesign }}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={{ user, loading, personalInfo, setPersonalInfo, education, setEducation, experience, setExperience, references, setReferences, skills, setSkills, otherInfo, setOtherInfo, iconElement, setIconElement, showEdit, setShowEdit, leftSkillVal, setLeftSkillVal, allLeftVal, setLeftVal, design, setDesign }}>{children}</AuthContext.Provider>;
 }

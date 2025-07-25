@@ -6,11 +6,11 @@ import CVDocument from "./pdfs/CVDocument";
 import { useAuthContext } from "@/context/AuthContext";
 
 const PdfViewer = () => {
-  const { personalInfo, skills, otherInfo, education, experience, references, sColor, fColor, edxColor, leftSkillVal, allLeftVal, design, iconElement } = useAuthContext();
+  const { personalInfo, skills, otherInfo, education, experience, references, leftSkillVal, allLeftVal, design, iconElement } = useAuthContext();
 
   return (
     <PDFViewer style={{ width: "100%", height: "100%" }}>
-      <CVDocument personalInfo={personalInfo} skills={skills} otherInfo={otherInfo} education={education} experience={experience} references={references} sColor={sColor} fColor={fColor} edxColor={edxColor} leftSkillVal={leftSkillVal} allLeftVal={allLeftVal} design={design} iconElement={iconElement} />
+      <CVDocument personalInfo={personalInfo} skills={skills} otherInfo={otherInfo} education={education} experience={experience} references={references} leftSkillVal={leftSkillVal} allLeftVal={allLeftVal} design={design} iconElement={iconElement} />
     </PDFViewer>
   );
 };
