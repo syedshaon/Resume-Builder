@@ -106,10 +106,6 @@ function Personalize() {
       <div className="color-area">
         <h3 className="design-title">Select List Icon</h3>
         <div className="color">
-          {/* <div className="color-picker icon">
-            <input id="iconElement" type="color" value={iconElement} onChange={handleIconElement} name="iconElement" />
-            <label htmlFor="iconElement">Icon Color</label>
-          </div> */}
           <div className="">
             <div className="icon-grid">
               {iconOptions.map((icon) => (
