@@ -1,12 +1,16 @@
+"use client";
+
 import Link from "next/link";
 import HeaderAuth from "./HeaderAuth";
+import { useRouter } from "next/navigation";
 
-import { FaEdit, FaCloudDownloadAlt, FaMagic, FaQuestion } from "react-icons/fa";
+import { FaEdit, FaMagic, FaQuestion } from "react-icons/fa";
 import LoadSample from "../cv-control/LoadSample";
 import { useAuthContext } from "@/context/AuthContext";
 
 export default function Header() {
   const { showEdit, setShowEdit } = useAuthContext();
+  const router = useRouter();
 
   const personalize = () => {
     setShowEdit(false);

@@ -84,7 +84,7 @@ export default function Page({ params }) {
         <FeatureCard icon={FaEdit} titleKey="edit_content" descriptionKey="edit_content_desc" />
         <FeatureCard icon={FaMagic} titleKey="personalize" descriptionKey="personalize_desc" />
         <FeatureCard icon={FaRobot} titleKey="auto_generate" descriptionKey="auto_generate_desc" />
-        <FeatureCard icon={FaCloudDownloadAlt} titleKey="download" descriptionKey="download_desc" />
+
         <FeatureCard icon={FaQuestion} titleKey="how_to" descriptionKey="how_to_desc" />
       </div>
 
@@ -94,17 +94,15 @@ export default function Page({ params }) {
           <em className="font-bold">{t("instructions.tldr")}</em>
         </p>
 
-        <Image priority className="my-20 max-w-[80%] mx-auto" width={900} height={555} alt="Button Introduction" src="/different-buttons.png" />
+        <Image priority className="my-20 max-w-[80%] mx-auto" width={900} height={555} alt="Button Introduction" src="/different-buttons.jpg" />
 
         <InstructionSection titleKey="add_content" pointsKey="add_content_points" />
         <Image className="my-20 max-w-[80%] mx-auto" width={900} height={490} alt="add image to cv resume" src="/add-image.png" />
         <Image className="my-20 max-w-[80%] mx-auto" width={900} height={415} alt="Add gap between parts of cv, resume" src="/gap.png" />
 
         <InstructionSection titleKey="customize" pointsKey="customize_points" />
-        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={569} alt="How to Personalize, customize your cv, resume" src="/personalize.png" />
 
         <InstructionSection titleKey="download" pointsKey="download_points" />
-        <Image className="my-20 max-w-[80%] mx-auto" width={900} height={460} alt="print download cv resume" src="/print.png" />
 
         <InstructionSection titleKey="signin" pointsKey="signin_points" />
         <InstructionSection titleKey="caution" pointsKey="caution_points" />

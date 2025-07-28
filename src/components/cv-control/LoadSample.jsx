@@ -191,7 +191,6 @@ function LoadSample() {
     ]);
 
     setIconElement("circle-check");
-    document.documentElement.style.setProperty("--icon", "#FECE00");
   };
   return <FaRobot className="cursor-pointer text-gray-700 hover:text-gray-950 text-xl transition-all hover:text-2xl w-10 " onClick={loadData} />;
 }

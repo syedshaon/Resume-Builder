@@ -1,4 +1,3 @@
-"use client";
 import Header from "./Header";
 import EducationForm from "./Education";
 import ExperienceForm from "./Experience";
