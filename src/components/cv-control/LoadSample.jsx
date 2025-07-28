@@ -82,18 +82,6 @@ function LoadSample() {
         visible: true,
         expand: false,
       },
-      {
-        id: 7,
-        school: "Udemy University",
-        degree: "Full-Stack Web Development",
-        result: "3.8 out of 4",
-        startDate: "January 2022",
-        endDate: "June 2022",
-        location: "San Francisco, USA",
-        summary: ["Completed an intensive bootcamp focused on modern web development technologies.", " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo, quam in quidem amet eligendi!"],
-        visible: true,
-        expand: false,
-      },
     ]);
 
     setExperience([
@@ -159,7 +147,7 @@ function LoadSample() {
         startDate: "March 2018",
         endDate: "May 2019",
         location: "San Francisco, USA",
-        summary: ["Collaborated with senior developers to build and maintain client websites using the latest web technologies."],
+        summary: ["Collaborated with senior developers to build and maintain client websites using the latest web technologies.", "PSD to HTML5, PSD to WordPress", "PSD to HTML5, PSD to WordPress"],
         visible: true,
         expand: false,
       },

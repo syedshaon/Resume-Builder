@@ -57,7 +57,7 @@ export function AuthContextProvider({ children }) {
       startDate: "January 2016",
       endDate: "June 2018",
       location: "San Francisco, USA",
-      summary: ["Completed an intensive bootcamp focused on modern web development technologies.", " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo, quam in quidem amet eligendi!"],
+      summary: ["Bootcamp focused on web development technologies.", " Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos illo,i!"],
       visible: true,
       expand: false,
     },
